@@ -1,0 +1,91 @@
+.header {
+  display: flex;
+  padding: 0.4rem 1.3rem;
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.header span {
+  height: 50px;
+  width: auto;
+}
+.header .right-icons {
+  display: flex;
+  padding-top: 2rem;
+  gap: 10px;
+}
+.header .cart img {
+  width: 20px;
+  height: 20px;
+}
+.header .searchbar {
+  padding-top: 1.3rem;
+}
+.header .searchbar img {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.main .banner {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+}
+.main .announces {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.main .announces .announce {
+  overflow: hidden;
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+.main .announces .announce:last-of-type {
+  margin-top: 10rem;
+}
+.main .announces .announce_content {
+  overflow: hidden;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+.main .announces .announce_content:last-of-type {
+  font-size: 22px;
+}
+.main .announces .btn_explore {
+  overflow: hidden;
+  margin-top: 3rem;
+  padding: 5px 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+.main .announces .btn_explore:hover {
+  background-color: black;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,49 @@
+@import 'responsive';
+
+.header {
+    display: flex;
+    padding: .4rem 1.3rem;
+    border-bottom: 1px solid #000;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    span {
+        height: 50px;
+        width: auto;
+    }
+
+    .right-icons {
+        display: flex;
+        padding-top: 2rem;
+        gap: 10px;
+    }
+
+    .cart {
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .searchbar {
+        padding-top: 1.3rem;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.navbar {
+    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+@include responsive {}
