@@ -1,4 +1,35 @@
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.source-serif-4-semibolditalic {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.source-serif-4-lightitalic {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 340;
+  font-style: italic;
+}
+
 .header {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   display: flex;
   padding: 0.4rem 1.3rem;
   border-bottom: 1px solid #000;
@@ -7,24 +38,24 @@
   background-color: #fff;
 }
 .header span {
-  height: 50px;
+  height: 3.125rem;
   width: auto;
 }
 .header .right-icons {
   display: flex;
   padding-top: 2rem;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .header .cart img {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .header .searchbar {
   padding-top: 1.3rem;
 }
 .header .searchbar img {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .navbar {
@@ -37,55 +68,125 @@
   margin: 0;
 }
 
+.footer {
+  background: #000;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer .divisionwhite {
+  padding-top: 2rem;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+.footer p {
+  color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  cursor: default;
+}
+.footer .footer_nav {
+  opacity: 0.8;
+}
+.footer .footer_nav .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .footer_nav .items .item_links {
+  margin-bottom: 1rem;
+}
+.footer .footer_nav .items .item_links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #fff;
+}
+.footer .footer_nav .items .item_links:hover {
+  opacity: 0.9;
+}
+.footer .footer_nav .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.footer .footer_nav .social .social_item {
+  padding-left: 2rem;
+}
+.footer .footer_nav .social .social_item:first-child {
+  padding-left: 0;
+}
+.footer .footer_nav .social a .svg {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  width: 2.3rem;
+  height: 2.3rem;
+  fill: #000;
+}
+
+.main {
+  font-family: "Source Serif 4", serif;
+}
 .main .banner {
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: #000;
   overflow: hidden;
+  max-width: 100%;
 }
 .main .announces {
+  margin: 4rem;
+}
+.main .announces .div_announces {
+  text-align: center;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center !important;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin: 6rem auto;
+  max-width: 100%;
+}
+.main .announces .division {
+  border-bottom: 1px solid #000;
+  margin: 0 -2rem;
 }
 .main .announces .announce {
-  overflow: hidden;
-  font-size: 2rem;
-  margin-top: 4rem;
-}
-.main .announces .announce:last-of-type {
-  margin-top: 10rem;
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: bold;
 }
 .main .announces .announce_content {
   overflow: hidden;
-  margin-top: 3rem;
-  font-size: 1.5rem;
-}
-.main .announces .announce_content:last-of-type {
-  font-size: 22px;
+  padding-top: 3rem;
+  color: #000;
+  max-width: 100%;
+  font-size: 1.688rem;
 }
 .main .announces .btn_explore {
   overflow: hidden;
   margin-top: 3rem;
-  padding: 5px 20px;
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+  padding: 0.31rem 1.25rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: 0.1s ease-in-out;
+  transition: 0.23s ease-in-out;
+  max-width: 100%;
 }
 .main .announces .btn_explore:hover {
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

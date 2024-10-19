@@ -1,58 +1,63 @@
 .main {
+    font-family: "Source Serif 4", serif;
     .banner {
         height: 70vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: black;
+        background-color: #000;
         overflow: hidden;
+        max-width: 100%;
     }
 
     .announces {
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center !important;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        margin-left: 5rem;
-        margin-right: 5rem;
-
-        .announce {
+        margin: 4rem;
+        .div_announces {
+            text-align: center;
             overflow: hidden;
-            font-size: 2rem;
-            margin-top: 4rem;
-            &:last-of-type {
-                margin-top: 10rem;
-            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 6rem auto;
+            max-width: 100%;
+        }
+
+        .division {
+            border-bottom: 1px solid #000;
+            margin: 0 -2rem;
+        }
+        .announce {
+            font-size: 2.5rem;
+            color: #000;
+            font-weight: bold;
         }
 
         .announce_content {
             overflow: hidden;
-            margin-top: 3rem;
-            font-size: 1.5rem;
-            &:last-of-type {
-                font-size: 22px;
-            }
+            padding-top: 3rem;
+            color: #000;
+            max-width: 100%;
+            font-size: 1.688rem;
         }
 
         .btn_explore {
             overflow: hidden;
             margin-top: 3rem;
-            padding: 5px 20px;
-            background-color: white;
-            color: black;
-            border: 1px solid black;
+            padding: 0.31rem 1.25rem;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #fff;
             border-radius: 10px;
-            font-size: 20px;
+            font-size: 1.5rem;
             cursor: pointer;
-            transition: 0.1s ease-in-out;
-                &:hover {
-                    background-color: black;
-                    color: white;
-                }
+            transition: 0.23s ease-in-out;
+            max-width: 100%;
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
         }
     }
 }
