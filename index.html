@@ -10,25 +10,40 @@
     <link rel="icon" href="dist/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap">
+    <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Buscar Produto">
+            <input type="text" class="search-bar" placeholder="Buscar Produto...">
             <img class="search-icon" src="./dist/img/search.svg" alt="Buscar">
         </div>
-        
-        <img class="icon" src="./dist/img/iconwhite.svg" alt="Icon-Corserius">
-        <div class="right-icons">
-            <span class="cart"><img src="./dist/img/cart.svg" alt="Carrinho"></span>
-            <span class="opennav"><img src="./dist/img/more.svg" alt="Menu"></span>
-        </div>
+        <a class="icon"><img class="icon-svg" src="./dist/img/iconwhite.svg" alt="Logo Corserius"></a>
+        <ul class="right-icons">
+            <li class="right_item">
+                <a class="login-btn">Entre ou Cadastre-se</a>
+            </li>
+            <li>
+                <a class="heart">
+                    <i class="heart-icon fa-solid fa-heart"></i>
+                </a>
+            </li>
+            <li class="right_item">
+                <a class="cart">
+                    <i class="cart-icon fa-solid fa-cart-shopping"></i>
+                </a>
+            </li>
+            <li class="right_item">
+                <a class="opennav">
+                    <i class="opennav-icon fa-solid fa-bars"></i>
+                </a>
+            </li>
+        </ul>
         <nav class="navbar">
-            <ul class="navlist">
+            <ul class="navlist oldenburg-regular">
                 <li class="item_off">Ofertas</li>
                 <li class="item_off">Infantil</li>
                 <li class="item_off">Masculino</li>
@@ -68,14 +83,19 @@
             </ul>
             <ul class="social">
                 <li class="social_item"><a href="#"><img class="svg" src="./dist/img/twitter.svg" alt="X"></a></li>
-                <li class="social_item"><a href="#"><img class="svg" src="./dist/img/instagram.svg" alt="Instagram"></a></li>
-                <li class="social_item"><a href="#"><img class="svg" src="./dist/img/youtube.svg" alt="YouTube"></a></li>
-                <li class="social_item"><a href="#"><img class="svg" src="./dist/img/linkedin.svg" alt="Linkedin"></a></li>
-                <li class="social_item"><a href="https://wa.me/5511970575847" target="_blank"><img class="svg" src="./dist/img/whatsapp.svg"alt="WhatsApp"></a></li>
+                <li class="social_item"><a href="#"><img class="svg" src="./dist/img/instagram.svg" alt="Instagram"></a>
+                </li>
+                <li class="social_item"><a href="#"><img class="svg" src="./dist/img/youtube.svg" alt="YouTube"></a>
+                </li>
+                <li class="social_item"><a href="#"><img class="svg" src="./dist/img/linkedin.svg" alt="Linkedin"></a>
+                </li>
+                <li class="social_item"><a href="https://wa.me/5511970575847" target="_blank"><img class="svg"
+                            src="./dist/img/whatsapp.svg" alt="WhatsApp"></a></li>
             </ul>
         </nav>
         <div class="divisionwhite"></div>
         <p class="copy">&copy; Todos os direitos Reservados. Corserios & SmokayDevs.</p>
     </footer>
 </body>
+
 </html>
