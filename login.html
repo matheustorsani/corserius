@@ -13,9 +13,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,14 +26,18 @@
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <form class="login_form">
-                <label class="orienta-regular" for="login_input">*Email ou CPF</label>
-                <input type="text" class="login_input" name="login_input">
-                <label class="orienta-regular" for="login_input">*Senha</label>
-                <input type="password" class="login_input" name="login_input">
-                <button class="login_btn">Entrar</button>
+                <label class="orienta-regular" for="email_or_cpf">*Email ou CPF</label>
+                <input type="text" class="login_input" id="email_or_cpf" name="email_or_cpf">
+                <label class="orienta-regular" for="password">*Senha</label>
+                <input type="password" class="login_input" id="password" name="password">
+                <a href="#" class="login_forgot orienta-regular">Esqueci a senha</a>
+                <button type="submit" class="login_btn ovo-regular">Entrar</button>
             </form>
-            <p class="login_forgot">Esqueceu a senha?</p>
-            <p class="login_register">Ainda não tem conta? <a href="#" class="login_register_link">Cadastre-se</a></p>
+            <span class="division"><p class="text">Ou</p></span>
+            <div class="login_register">
+                <p class="redesocial-text">Faça login com o google</p>
+                <i class="fa-brands fa-google google-logo"></i>
+            </div>
         </div>
     </section>
 </body>
