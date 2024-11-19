@@ -482,6 +482,9 @@ body {
 }
 
 .loginscreen {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
   width: 100%;
   height: 100%;
   display: flex;
@@ -500,7 +503,7 @@ body {
 .loginscreen .login .title,
 .loginscreen .login .login_form,
 .loginscreen .login .login_register {
-  margin: 2rem 3rem;
+  margin: 1rem 3rem;
 }
 .loginscreen .login .title {
   width: 100%;
@@ -510,18 +513,32 @@ body {
   color: #000;
   background: #BBB6B6;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .loginscreen .login .title .login_title {
   font-size: 28px;
   font-weight: 600;
+  padding-left: 3.7rem;
+}
+.loginscreen .login .title .close_buttom {
+  height: 1.6rem;
+  align-self: center;
+  cursor: pointer;
+  padding-right: 0.6rem;
 }
 .loginscreen .login .login_form {
   display: flex;
   flex-direction: column;
 }
-.loginscreen .login .login_form label {
+.loginscreen .login .login_form .lbl {
   font-size: 12px;
+}
+.loginscreen .login .login_form .lbl::before {
+  content: "*";
+  color: #ff5757;
 }
 .loginscreen .login .login_form .login_input {
   padding: 0.4rem 0.1rem;
@@ -553,12 +570,18 @@ body {
   height: 50%;
   color: #fff;
   background-color: #161616;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .loginscreen .login .division {
   display: flex;
   align-items: center;
   width: 17.75rem;
-  margin: 1rem 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .loginscreen .login .division::before, .loginscreen .login .division::after {
   content: "";
@@ -583,9 +606,25 @@ body {
   flex-direction: column;
 }
 .loginscreen .login .login_register .redesocial-text {
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.7rem;
 }
-.loginscreen .login .login_register .google-logo {
-  padding: 0.23rem;
+.loginscreen .login .login_register .googleauth:visited {
+  color: transparent;
+}
+.loginscreen .login .login_register .googleauth .google-logo {
+  height: 1.45rem;
+  padding: 0.23rem 0.5rem;
   border: 1px solid #000;
+}
+.loginscreen .login .login_register .noaccount {
+  padding-top: 0.76rem;
+  font-size: 14px;
+  color: #000;
+}
+.loginscreen .login .login_register .noaccount .cad:visited {
+  color: #000;
+}
+
+.invisible {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
