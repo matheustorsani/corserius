@@ -14,6 +14,13 @@ body {
     color: $text-light;
     background-color: $bg-light;
     transition: background-color 0.5s ease, color 0.5s ease;
+
+    @media (hover: none) and (pointer: coarse) {
+        html,
+        body {
+            user-select: text;
+        }
+    }
 }
 
 // @media (prefers-color-scheme: dark) {

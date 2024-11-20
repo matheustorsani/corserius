@@ -16,6 +16,16 @@ body {
   background-color: white;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+@media (hover: none) and (pointer: coarse) {
+  html html,
+  html body,
+  body html,
+  body body {
+    -webkit-user-select: text;
+       -moz-user-select: text;
+            user-select: text;
+  }
+}
 
 .orienta-regular {
   font-family: "Orienta", sans-serif;
@@ -534,6 +544,7 @@ body {
   flex-direction: column;
 }
 .loginscreen .login .login_form .lbl {
+  font-weight: bold;
   font-size: 12px;
 }
 .loginscreen .login .login_form .lbl::before {
@@ -542,10 +553,11 @@ body {
 }
 .loginscreen .login .login_form .login_input {
   padding: 0.4rem 0.1rem;
-  font-size: 17px;
+  font-size: 14px;
   border: none;
   border-bottom: 1px solid rgba(11, 11, 11, 0.5098039216);
   margin-bottom: 1rem;
+  width: 18rem;
 }
 .loginscreen .login .login_form .login_input:focus-visible {
   outline: none;
@@ -625,6 +637,193 @@ body {
   color: #000;
 }
 
-.invisible {
-  display: none;
+.registerscreen {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+.registerscreen .register {
+  display: flex;
+  border: 1px solid rgba(11, 11, 11, 0.5098039216);
+  border-radius: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.registerscreen .register .title,
+.registerscreen .register .register_form,
+.registerscreen .register .register_google {
+  margin: 1rem 3rem;
+}
+.registerscreen .register .title {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  margin: 0;
+  color: #000;
+  background: #BBB6B6;
+  display: flex;
+  justify-content: space-between;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.registerscreen .register .title .register_title {
+  font-size: 28px;
+  font-weight: 600;
+  padding-left: 3.7rem;
+}
+.registerscreen .register .title .close_buttom {
+  height: 1.6rem;
+  align-self: center;
+  cursor: pointer;
+  padding-right: 0.6rem;
+}
+.registerscreen .register .register_form {
+  display: flex;
+  flex-direction: column;
+}
+.registerscreen .register .register_form .register_text {
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.registerscreen .register .register_form .register_text .register_login {
+  text-decoration: underline;
+  color: #000;
+  font-weight: bold;
+}
+.registerscreen .register .register_form .register_text .register_login:visited {
+  color: #000;
+}
+.registerscreen .register .register_form .register_text .register_login:hover {
+  color: #ff5757;
+}
+.registerscreen .register .register_form .lbl {
+  font-weight: bold;
+  font-size: 12px;
+}
+.registerscreen .register .register_form .lbl::before {
+  content: "*";
+  color: #ff5757;
+}
+.registerscreen .register .register_form .lbl.pass {
+  padding-bottom: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.registerscreen .register .register_form .lbl.pass::before {
+  content: "";
+}
+.registerscreen .register .register_form .register_input {
+  padding: 0.4rem 0.1rem;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid rgba(11, 11, 11, 0.5098039216);
+  margin-bottom: 1rem;
+  width: 18rem;
+}
+.registerscreen .register .register_form .register_input:focus-visible {
+  outline: none;
+}
+.registerscreen .register .register_form .register_input.tel {
+  margin-bottom: 2rem;
+}
+.registerscreen .register .register_form .register_forgot {
+  margin: -0.438rem 0 1rem 0.6rem;
+  align-self: flex-end;
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+.registerscreen .register .register_form .register_forgot:hover {
+  text-decoration: underline;
+}
+.registerscreen .register .register_form .register_btn {
+  padding: 0.2rem 1rem;
+  align-self: center;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  width: 50%;
+  height: 50%;
+  color: #fff;
+  background-color: #161616;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.registerscreen .register .register_form .password_requirements {
+  font-size: 13px;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.registerscreen .register .register_form .password_requirements .requirements {
+  list-style: circle;
+  padding-left: 1rem;
+}
+.registerscreen .register .division {
+  display: flex;
+  align-items: center;
+  width: 17.75rem;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.registerscreen .register .division::before, .registerscreen .register .division::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid rgba(11, 11, 11, 0.5098039216);
+}
+.registerscreen .register .division::before {
+  margin-right: 0.5em;
+}
+.registerscreen .register .division::after {
+  margin-left: 0.5em;
+}
+.registerscreen .register .division .text {
+  font-size: 0.75rem;
+  margin: 0 0.5em;
+  white-space: pre;
+}
+.registerscreen .register .register_google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.registerscreen .register .register_google .redesocial-text {
+  padding-bottom: 0.7rem;
+}
+.registerscreen .register .register_google .googleauth:visited {
+  color: transparent;
+}
+.registerscreen .register .register_google .googleauth .google-logo {
+  height: 1.45rem;
+  padding: 0.23rem 0.5rem;
+  border: 1px solid #000;
+}
+.registerscreen .register .register_google .noaccount {
+  padding-top: 0.76rem;
+  font-size: 14px;
+  color: #000;
+}
+.registerscreen .register .register_google .noaccount .cad:visited {
+  color: #000;
+}
+.registerscreen .register .alert {
+  font-size: 10px;
+  font-weight: bold;
+}
+.registerscreen .register .alert::before {
+  content: "*";
+  color: #f00;
 }/*# sourceMappingURL=style.css.map */

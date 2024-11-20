@@ -51,6 +51,7 @@
             flex-direction: column;
 
             .lbl {
+                font-weight: bold;
                 font-size: 12px;
                 &::before {
                     content: '*';
@@ -60,11 +61,11 @@
 
             .login_input {
                 padding: 0.4rem 0.1rem;
-                font-size: 17px;
+                font-size: 14px;
                 border: none;
                 border-bottom: 1px solid #0b0b0b82;
                 margin-bottom: 1rem;
-
+                width: 18rem;
                 &:focus-visible {
                     outline: none;
                 }

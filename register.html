@@ -25,17 +25,55 @@
                 <h1 class="register_title orienta-regular">Cadastro</h1>
                 <i class="fa-solid fa-xmark close_buttom"></i>
             </div>
+            <div class="register_google">
+                <p class="redesocial-text">Cadastrar com a Conta Google.</p>
+                <a href="#" class="googleauth"><i class="fa-brands fa-google google-logo"></i></a>
+            </div>
+            <p class="alert">Preenchimentos Obrigatórios.</p>
             <form class="register_form">
-                <label class="orienta-regular lbl" for="email_or_cpf">Email ou CPF</label>
-                <input type="text" class="register_input" id="email_or_cpf" name="email_or_cpf">
+                <label class="orienta-regular lbl" for="email">Email</label>
+                <input type="text" class="register_input" id="email" name="email">
+                <label class="orienta-regular lbl" for="cpf">CPF</label>
+                <input type="text" class="register_input" id="cpf" name="cpf">
+                <label class="orienta-regular lbl" for="name">Nome Completo</label>
+                <input type="text" class="register_input" id="name" name="name">
+                <label class="orienta-regular lbl" for="nasc">Data de Nascimento</label>
+                <input type="date" class="register_input" id="nasc" name="nasc">
+                <label class="orienta-regular lbl" for="genero">Gênero</label>
+                <select name="genero" id="genero" class="register_input">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
                 <label class="orienta-regular lbl" for="password">Senha</label>
                 <input type="password" class="register_input" id="password" name="password">
-                <a href="#" class="register_forgot orienta-regular">Esqueci a senha</a>
-                <button type="submit" class="register_btn ovo-regular">Entrar</button>
+                <label class="orienta-regular lbl pass" for="show_password">
+                    <input type="checkbox" id="show_password" onclick="togglePasswordVisibility()">Mostrar Senha
+                </label>
+                <div class="password_requirements orienta-regular">
+                    <p class="alertpassword">A senha deve conter:</p>
+                    <ul class="requirements">
+                        <li class="requirement">Ao menos 6 caracteres.</li>
+                        <li class="requirement">Ao menos 1 letra maiúscula.</li>
+                        <li class="requirement">Ao menos 1 letra minúscula.</li>
+                        <li class="requirement">Ao menos 1 caractere especial.</li>
+                    </ul>
+                    <p class="alertpassword">Dicas de segurança:</p>
+                    <ul class="requirements">
+                        <li class="requirement">Não use seu nome, sobrenome ou e-mail.</li>
+                        <li class="requirement">Não use caracteres iguais em sequência.</li>
+                    </ul>
+                </div>
+                <label class="orienta-regular lbl" for="password2">Confirme a Senha</label>
+                <input type="password" class="register_input" id="password2" name="password2">
+                <label class="orienta-regular lbl" for="tel">Telefone</label>
+                <input type="tel" class="register_input tel" id="tel" name="tel">
+                <p class="register_text orienta-regular">Já tem uma conta? <a href="#" class="register_login">Entrar</a>
+                </p>
+                <button type="submit" class="register_btn ovo-regular">Cadastrar</button>
             </form>
-            <span class="division"><p class="text">Ou</p></span>
-            
         </div>
     </section>
 </body>
+
 </html>
