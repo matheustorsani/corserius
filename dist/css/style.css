@@ -273,6 +273,8 @@ body {
 }
 .footer .footer_nav .social .social_item {
   padding-left: 2rem;
+  font-size: 2rem;
+  color: #fff;
 }
 .footer .footer_nav .social .social_item:first-child {
   padding-left: 0;
@@ -450,6 +452,12 @@ body {
 .main .announces {
   margin: 4rem;
 }
+@media screen and (min-width: 767px) {
+  .main .announces {
+    display: none;
+    visibility: hidden;
+  }
+}
 .main .announces .div_announces {
   text-align: center;
   overflow: hidden;
@@ -495,6 +503,59 @@ body {
   color: #fff;
 }
 
+@media (min-width: 767px) {
+  .MainDesktop {
+    width: 100%;
+  }
+  .MainDesktop .Carrosel .CarroselDesktop {
+    width: 100%;
+    height: 70vh;
+  }
+  .MainDesktop .VejaDesk {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 0 2rem;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+  .MainDesktop .secaoCategoria {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+  .MainDesktop .secaoCategoria .SecDesk {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    height: 70vh;
+  }
+  .MainDesktop .secaoCategoria .SecDesk:hover {
+    transform: scale(1.1);
+    transition: 0.9s ease;
+    box-shadow: #000 0px 1px 6px;
+  }
+  .MainDesktop .secaoCategoria .SecDesk .imgDesk {
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  .MainDesktop .secaoCategoria .SecDesk .LegendaFotoDesk {
+    text-shadow: #000 0px 0px 10px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 3rem;
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .hidden {
   display: none !important;
 }
