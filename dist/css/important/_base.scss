@@ -23,12 +23,18 @@ body {
     }
 }
 
+
+
 // @media (prefers-color-scheme: dark) {
 //     body {
 //       background-color: $bg-dark;
 //       color: $text-dark;
 //     }
 // }
+
+.blur {
+    filter: blur(4px);
+}
 
 .orienta-regular {
     font-family: "Orienta", sans-serif;

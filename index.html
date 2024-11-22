@@ -10,7 +10,8 @@
     <link rel="icon" href="dist/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap">
     <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
 </head>
@@ -24,7 +25,7 @@
         <a class="icon"><img class="icon-svg" src="./dist/img/iconwhite.svg" alt="Logo Corserius"></a>
         <ul class="right-icons">
             <li class="right_item">
-                <a class="login-btn">Entre ou Cadastre-se</a>
+                <p class="login-btn">Entre ou Cadastre-se</p>
             </li>
             <li>
                 <a class="heart">
@@ -56,9 +57,7 @@
             </ul>
         </nav>
     </header>
-  
     <main class="main">
-        <div class="carrousel"></div>
         <section class="announces">
             <div class="div_announces">
                 <h1 class="announce source-serif-4-semibolditalic">Elegancia ao Dispor.</h1>
@@ -73,6 +72,85 @@
             </div>
         </section>
     </main>
+    <section class="loginscreen hidden">
+        <div class="login">
+            <div class="title">
+                <h1 class="login_title orienta-regular">Identificação</h1>
+                <i class="close_buttom"></i>
+            </div>
+            <form class="login_form">
+                <label class="lbl" for="email_or_cpf">Email ou CPF</label>
+                <input type="text" class="login_input" id="email_or_cpf" name="email_or_cpf" placeholder="Insira o email ou CPF">
+                <label class="lbl" for="passwordlogin">Senha</label>
+                <input type="password" class="login_input" id="passwordlogin" name="passwordlogin">
+                <a href="#" class="login_forgot">Esqueci a senha</a>
+                <button type="submit" class="login_btn">Entrar</button>
+            </form>
+            <span class="division">
+                <p class="text">Ou</p>
+            </span>
+            <div class="login_register invisible">
+                <p class="redesocial-text">Faça login com o google</p>
+                <a href="#" class="googleauth"><i class="fa-brands fa-google google-logo"></i></a>
+                <p class="noaccount">Não tem conta? <a href="#" class="cad">Cadastre-se.</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="registerscreen hidden">
+        <div class="register">
+            <div class="title">
+                <h1 class="register_title orienta-regular">Cadastro</h1>
+                <i class="close_buttom"></i>
+            </div>
+            <div class="register_google">
+                <p class="redesocial-text">Cadastrar com a Conta Google.</p>
+                <a href="#" class="googleauth"><i class="fa-brands fa-google google-logo"></i></a>
+            </div>
+            <p class="alert">Preenchimentos Obrigatórios.</p>
+            <form class="register_form">
+                <label class="lbl" for="email">Email</label>
+                <input type="text" class="register_input" id="email" name="email">
+                <label class="lbl" for="cpf">CPF</label>
+                <input type="text" class="register_input" id="cpf" name="cpf">
+                <label class="lbl" for="name">Nome Completo</label>
+                <input type="text" class="register_input" id="name" name="name">
+                <label class="lbl" for="nasc">Data de Nascimento</label>
+                <input type="date" class="register_input" id="nasc" name="nasc">
+                <label class="lbl" for="genero">Gênero</label>
+                <select name="genero" id="genero" class="register_input">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <label class="lbl" for="passwordreg">Senha</label>
+                <input type="password" class="register_input" id="passwordreg" name="passwordreg">
+                <label class="lbl pass" for="show_password">
+                    <input type="checkbox" class="show_password">Mostrar Senha
+                </label>
+                <div class="password_requirements">
+                    <p class="alertpassword">A senha deve conter:</p>
+                    <ul class="requirements">
+                        <li class="requirement">Ao menos 6 caracteres.</li>
+                        <li class="requirement">Ao menos 1 letra maiúscula.</li>
+                        <li class="requirement">Ao menos 1 letra minúscula.</li>
+                        <li class="requirement">Ao menos 1 caractere especial.</li>
+                    </ul>
+                    <p class="alertpassword">Dicas de segurança:</p>
+                    <ul class="requirements">
+                        <li class="requirement">Não use seu nome, sobrenome ou e-mail.</li>
+                        <li class="requirement">Não use caracteres iguais em sequência.</li>
+                    </ul>
+                </div>
+                <label class="lbl" for="password2">Confirme a Senha</label>
+                <input type="password" class="register_input" id="password2" name="password2">
+                <label class="lbl" for="tel">Telefone</label>
+                <input type="tel" class="register_input tel" id="tel" name="tel">
+                <p class="register_text">Já tem uma conta? <a href="#" class="register_login">Entrar</a></p>
+                <button type="submit" class="register_btn">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+    
     <footer class="footer">
         <nav class="footer_nav">
             <ul class="items">
@@ -96,5 +174,5 @@
         <p class="copy">&copy; Todos os direitos Reservados. Corserios & SmokayDevs.</p>
     </footer>
 </body>
-
+<script src="./dist/js/index.js"></script>
 </html>
