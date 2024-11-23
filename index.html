@@ -81,7 +81,8 @@
             </div>
             <form class="login_form">
                 <label class="lbl " for="email_or_cpf">Email ou CPF</label>
-                <input type="text" class="login_input" id="email_or_cpf" name="email_or_cpf" placeholder="Insira o email ou CPF">
+                <input type="text" class="login_input" id="email_or_cpf" name="email_or_cpf"
+                    placeholder="Insira o email ou CPF">
                 <label class="lbl" for="passwordlogin">Senha</label>
                 <input type="password" class="login_input" id="passwordlogin" name="passwordlogin">
                 <a href="#" class="login_forgot">Esqueci a senha</a>
@@ -97,7 +98,7 @@
             </div>
         </div>
     </section>
-<!-- HTML DO REGISTER -->
+    <!-- HTML DO REGISTER -->
     <section class="registerscreen hidden">
         <div class="register">
             <div class="title">
@@ -152,59 +153,82 @@
             </form>
         </div>
     </section>
-    
+
     <!-- Conteudo para desktop -->
-     <main class="MainDesktop">
+    <main class="MainDesktop">
         <div class="Carrosel">
             <a href="#" class="linkCarrosel"></a>
-         </div>
-            <h1 class="VejaDesk">Veja Tambem!</h1>
-       
-     <div class = "secaoCategoria">
-        <section class="SecDesk">
-            <a href="#">
-            <img src="./dist/img/HomemHome.svg" alt="HomemHome" class="imgSecao">
-            <h2 class="LegendaFotoDesk">Masculino</h2>
-            </a>
-        </section>
+        </div>
+        <h1 class="VejaDesk">Veja Tambem!</h1>
 
-        <section class="SecDesk">
-            <a href="#">
-            <img src="./dist/img/FemininoHome.svg" alt="FemininoHome" class="imgSecao">
-            <h2 class="LegendaFotoDesk">Feminino</h2>
-            </a>
-        </section>
+        <div class="secaoCategoria">
+            <section class="SecDesk">
+                <a href="#">
+                    <img src="./dist/img/HomemHome.svg" alt="HomemHome" class="imgSecao">
+                    <h2 class="LegendaFotoDesk">Masculino</h2>
+                </a>
+            </section>
 
-        <section class="SecDesk">
-            <a href="#">
-            <img src="./dist/img/InfantilHome.svg" alt="InfantilHome" class="imgSecao">
-            <h2 class="LegendaFotoDesk">Infantil</h2>
-            </a>
-        </section>
-    </div>
-     </main>
+            <section class="SecDesk">
+                <a href="#">
+                    <img src="./dist/img/FemininoHome.svg" alt="FemininoHome" class="imgSecao">
+                    <h2 class="LegendaFotoDesk">Feminino</h2>
+                </a>
+            </section>
+
+            <section class="SecDesk">
+                <a href="#">
+                    <img src="./dist/img/InfantilHome.svg" alt="InfantilHome" class="imgSecao">
+                    <h2 class="LegendaFotoDesk">Infantil</h2>
+                </a>
+            </section>
+        </div>
+    </main>
 
     <footer class="footer">
         <nav class="footer_nav">
-            <ul class="items">
-                <li class="item_links"><a href="#">Sobre Nós</a></li>
-                <li class="item_links"><a href="#">Encontre a loja</a></li>
+            <ul class="items_aboutus">
+                <li class="item_links essential"><a href="#">Sobre Nós</a></li>
+                <li class="item_links essential"><a href="#">Encontre a loja</a></li>
                 <li class="item_links"><a href="#">Fale Conosco</a></li>
+                <li class="item_links"><a href="#">Patrocinios e Projetos</a></li>
+                <li class="item_links"><a href="#">Investidores</a></li>
+                <li class="item_links"><a href="#">Imprensa</a></li>
+                <li class="item_links"><a href="#">Black Friday</a></li>
             </ul>
-            <ul class="social">
-                <li class="social_item"><i class="fa-brands fa-x-twitter"></i></li>
-                <li class="social_item"><i class="fa-brands fa-instagram"></i>
-                </li>
-                <li class="social_item"><i class="fa-brands fa-youtube"></i>
-                </li>
-                <li class="social_item"><i class="fa-brands fa-linkedin-in"></i>
-                </li>
-                <li class="social_item"><i class="fa-brands fa-whatsapp"></i></li>
+            <ul class="items_faq">
+                <h2 class="FAQ">Perguntas Frequentes</h2>
+                <li class="item_links"><a href="#">Política de Privacidade</a></li>
+                <li class="item_links"><a href="#">Central de Privacidade</a></li>
+                <li class="item_links"><a href="#">Termos de Uso</a></li>
+                <li class="item_links"><a href="#">Trocas e Devoluções</a></li>
+                <li class="item_links"><a href="#">Acompanhe seu Pedido </a></li>
             </ul>
+            <div class="moreSocial">
+                <div class="wrapper">
+                    <a href="#" class="link">
+                        <i class="icon fa-solid fa-shop"></i>
+                        <span class="text">Retire na loja</span>
+                    </a>
+                    <a href="#" class="link">
+                        <i class="icon fa-regular fa-comment"></i>
+                        <span class="text">Fale Conosco</span>
+                    </a>
+                </div>
+                <ul class="social">
+                    <li class="social_item"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li class="social_item"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="social_item"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li class="social_item"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li class="social_item"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+
         </nav>
         <div class="divisionwhite"></div>
-        <p class="copy">&copy; Todos os direitos Reservados. Corserios & SmokayDevs.</p>
+        <p class="copy">&copy; Todos os direitos Reservados. Corserius & SmokayDevs.</p>
     </footer>
 </body>
 <script src="./dist/js/index.js"></script>
+
 </html>

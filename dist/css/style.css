@@ -238,7 +238,7 @@ body {
   width: 100%;
   border-bottom: 1px solid #fff;
 }
-.footer p {
+.footer .copy {
   color: #fff;
   padding-top: 3rem;
   padding-bottom: 1rem;
@@ -247,48 +247,166 @@ body {
 .footer .footer_nav {
   opacity: 0.8;
 }
-.footer .footer_nav .items {
+.footer .footer_nav .items_aboutus {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.footer .footer_nav .items .item_links {
+.footer .footer_nav .items_aboutus .item_links {
   margin-bottom: 1rem;
 }
-.footer .footer_nav .items .item_links a {
+.footer .footer_nav .items_aboutus .item_links a {
   text-decoration: none;
   color: #fff;
   font-size: 1.3rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid #fff;
 }
-.footer .footer_nav .items .item_links:hover {
+.footer .footer_nav .items_aboutus .item_links a:hover {
   opacity: 0.9;
 }
-.footer .footer_nav .social {
+.footer .footer_nav .items_aboutus .item_links:hover {
+  opacity: 0.9;
+}
+.footer .footer_nav .moreSocial {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
 }
-.footer .footer_nav .social .social_item {
-  padding-left: 2rem;
+.footer .footer_nav .moreSocial .social .social_item {
   font-size: 2rem;
   color: #fff;
-}
-.footer .footer_nav .social .social_item:first-child {
-  padding-left: 0;
-}
-.footer .footer_nav .social a .svg {
+  overflow: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  overflow: hidden;
   width: 2.3rem;
   height: 2.3rem;
-  fill: #000;
+}
+.footer .footer_nav .moreSocial .social .social_item:first-child {
+  padding-left: 0;
+}
+.footer .footer_nav .moreSocial .social .social_item a {
+  text-decoration: none;
+  color: #000;
 }
 
+@media (min-width: 767px) {
+  .footer {
+    background: #BBBBBB;
+    color: #000;
+  }
+  .footer .footer_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    gap: 10rem;
+  }
+  .footer .footer_nav .items_aboutus .item_links {
+    margin: 0;
+  }
+  .footer .footer_nav .items_aboutus .item_links:first-of-type {
+    padding-bottom: 1rem;
+  }
+  .footer .footer_nav .items_aboutus .item_links:first-of-type a {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .footer .footer_nav .items_aboutus .item_links:first-of-type a:hover {
+    cursor: default;
+    text-decoration: none;
+  }
+  .footer .footer_nav .items_aboutus .item_links a {
+    color: #000;
+    border: none;
+    font-size: 1rem;
+  }
+  .footer .footer_nav .items_aboutus .item_links a:hover {
+    text-decoration: underline;
+  }
+  .footer .footer_nav .items_faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer .footer_nav .items_faq .FAQ {
+    font-weight: bold;
+    color: #000;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  .footer .footer_nav .items_faq .item_links {
+    margin: 0;
+  }
+  .footer .footer_nav .items_faq .item_links:last-child {
+    margin-bottom: calc(2rem - 6px);
+  }
+  .footer .footer_nav .items_faq .item_links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #fff;
+    color: #000;
+    border: none;
+    font-size: 1rem;
+  }
+  .footer .footer_nav .items_faq .item_links a:hover {
+    opacity: 0.9;
+  }
+  .footer .footer_nav .items_faq .item_links a:hover {
+    text-decoration: underline;
+  }
+  .footer .footer_nav .moreSocial {
+    order: -1;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .footer .footer_nav .moreSocial .wrapper {
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .footer_nav .moreSocial .social {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+    gap: 1rem;
+  }
+  .footer .footer_nav .moreSocial .link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #fff;
+    color: #000;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    gap: 0.5rem;
+  }
+  .footer .footer_nav .moreSocial .link:hover {
+    opacity: 0.9;
+  }
+  .footer .footer_nav .moreSocial .link:hover {
+    text-decoration: underline;
+  }
+  .footer .footer_nav .moreSocial .link .icon {
+    height: 30px;
+  }
+  .copy {
+    color: #000 !important;
+  }
+}
 .prdnatela {
   padding-top: 20px;
   width: 100%;
@@ -480,6 +598,10 @@ body {
     margin-bottom: 1rem;
   }
 }
+.MainDesktop {
+  display: none;
+}
+
 .main {
   font-family: "Source Serif 4", serif;
 }
@@ -494,12 +616,6 @@ body {
 }
 .main .announces {
   margin: 4rem;
-}
-@media screen and (min-width: 767px) {
-  .main .announces {
-    display: none;
-    visibility: hidden;
-  }
 }
 .main .announces .div_announces {
   text-align: center;
@@ -547,8 +663,12 @@ body {
 }
 
 @media (min-width: 767px) {
+  .main {
+    display: none;
+  }
   .MainDesktop {
     width: 100%;
+    display: block;
   }
   .MainDesktop .Carrosel {
     background: url("https://cdn.discordapp.com/attachments/1289706206486593680/1309690601272381541/Black_Friday_1.png?ex=67427fec&is=67412e6c&hm=922263dc71b3b1e32ec0e3f1ba8af20c295d3836dc318b63258efa1cb5024273&") no-repeat center;
