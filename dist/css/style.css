@@ -313,7 +313,7 @@ body {
 }
 
 .estrelinhaspd {
-  padding: 2rem 0 0 2rem;
+  margin: 2rem 0 0 2rem;
   text-decoration: none;
   color: #000;
 }
@@ -437,6 +437,49 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 767px) {
+  .main_product {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  .main_product .nav_product {
+    display: flex;
+  }
+  .main_product .nav_product .Prdlist {
+    display: list-item;
+    margin: 5rem 0 0 10rem;
+    width: 4.4rem;
+  }
+  .main_product .nav_product .prdnatela {
+    width: 45rem;
+    height: 45rem;
+  }
+  .main_product .infos {
+    display: inline-block;
+  }
+  .main_product .infos .avaliacao {
+    padding-top: 1.2rem;
+    width: 70%;
+  }
+  .main_product .infos .avaliacao .NomeProduto {
+    font-size: 20px;
+    font-weight: 550;
+    display: flex;
+    width: 100%;
+  }
+  .main_product .infos .avaliacao .estrelinhaspd {
+    display: inline;
+  }
+  .main_product .infos .Preçopd {
+    padding: 0 0 0 2.1rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .main_product .infos .divisioncredit {
+    margin-bottom: 1rem;
+  }
+}
 .main {
   font-family: "Source Serif 4", serif;
 }
@@ -507,7 +550,10 @@ body {
   .MainDesktop {
     width: 100%;
   }
-  .MainDesktop .Carrosel .CarroselDesktop {
+  .MainDesktop .Carrosel {
+    background: url("https://cdn.discordapp.com/attachments/1289706206486593680/1309690601272381541/Black_Friday_1.png?ex=67427fec&is=67412e6c&hm=922263dc71b3b1e32ec0e3f1ba8af20c295d3836dc318b63258efa1cb5024273&") no-repeat center;
+    background-size: cover;
+    background-position: center top;
     width: 100%;
     height: 70vh;
   }
@@ -534,15 +580,14 @@ body {
     position: relative;
     border-radius: 15px;
     height: 70vh;
+    transition: 0.5s;
   }
   .MainDesktop .secaoCategoria .SecDesk:hover {
     transform: scale(1.1);
-    transition: 0.9s ease;
     box-shadow: #000 0px 1px 6px;
   }
   .MainDesktop .secaoCategoria .SecDesk .imgDesk {
     height: auto;
-    transition: transform 0.5s ease;
   }
   .MainDesktop .secaoCategoria .SecDesk .LegendaFotoDesk {
     text-shadow: #000 0px 0px 10px;
@@ -564,11 +609,11 @@ body {
   width: 100%;
   height: 100%;
   padding: 1rem 0;
-  margin: 0;
+  margin: 1;
   color: #000;
   background: #BBB6B6;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -590,16 +635,17 @@ body {
      -moz-user-select: text;
           user-select: text;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -48%);
   z-index: 9999;
-  overflow: hidden;
+  overflow: auto;
 }
 .loginscreen .login,
 .loginscreen .register,
@@ -612,6 +658,35 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 22rem;
+  padding-bottom: 2rem;
+}
+.loginscreen .login .register_google,
+.loginscreen .register .register_google,
+.registerscreen .login .register_google,
+.registerscreen .register .register_google {
+  padding-top: 1rem;
+}
+.loginscreen .login .register_google .googleauth,
+.loginscreen .register .register_google .googleauth,
+.registerscreen .login .register_google .googleauth,
+.registerscreen .register .register_google .googleauth {
+  padding-top: 1rem;
+}
+.loginscreen .login .alert,
+.loginscreen .register .alert,
+.registerscreen .login .alert,
+.registerscreen .register .alert {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 1rem;
+}
+.loginscreen .login .alert::before,
+.loginscreen .register .alert::before,
+.registerscreen .login .alert::before,
+.registerscreen .register .alert::before {
+  content: "*";
+  color: #ff5757;
 }
 .loginscreen .login .title .login_title,
 .loginscreen .login .title .register_title,
@@ -621,6 +696,7 @@ body {
 .registerscreen .login .title .register_title,
 .registerscreen .register .title .login_title,
 .registerscreen .register .title .register_title {
+  padding-left: 2rem;
   font-size: 28px;
   font-weight: 600;
 }
@@ -634,6 +710,62 @@ body {
 .registerscreen .register .register_form {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
+}
+.loginscreen .login .login_form .login_forgot,
+.loginscreen .login .register_form .login_forgot,
+.loginscreen .register .login_form .login_forgot,
+.loginscreen .register .register_form .login_forgot,
+.registerscreen .login .login_form .login_forgot,
+.registerscreen .login .register_form .login_forgot,
+.registerscreen .register .login_form .login_forgot,
+.registerscreen .register .register_form .login_forgot {
+  color: #000;
+  align-self: end;
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+.loginscreen .login .login_form .login_forgot:hover,
+.loginscreen .login .register_form .login_forgot:hover,
+.loginscreen .register .login_form .login_forgot:hover,
+.loginscreen .register .register_form .login_forgot:hover,
+.registerscreen .login .login_form .login_forgot:hover,
+.registerscreen .login .register_form .login_forgot:hover,
+.registerscreen .register .login_form .login_forgot:hover,
+.registerscreen .register .register_form .login_forgot:hover {
+  text-decoration: underline;
+  color: #0014ac;
+}
+.loginscreen .login .login_form .register_text,
+.loginscreen .login .register_form .register_text,
+.loginscreen .register .login_form .register_text,
+.loginscreen .register .register_form .register_text,
+.registerscreen .login .login_form .register_text,
+.registerscreen .login .register_form .register_text,
+.registerscreen .register .login_form .register_text,
+.registerscreen .register .register_form .register_text {
+  align-self: end;
+  padding-bottom: 1rem;
+}
+.loginscreen .login .login_form .register_login,
+.loginscreen .login .register_form .register_login,
+.loginscreen .register .login_form .register_login,
+.loginscreen .register .register_form .register_login,
+.registerscreen .login .login_form .register_login,
+.registerscreen .login .register_form .register_login,
+.registerscreen .register .login_form .register_login,
+.registerscreen .register .register_form .register_login {
+  color: #000;
+}
+.loginscreen .login .login_form .register_login:hover,
+.loginscreen .login .register_form .register_login:hover,
+.loginscreen .register .login_form .register_login:hover,
+.loginscreen .register .register_form .register_login:hover,
+.registerscreen .login .login_form .register_login:hover,
+.registerscreen .login .register_form .register_login:hover,
+.registerscreen .register .login_form .register_login:hover,
+.registerscreen .register .register_form .register_login:hover {
+  color: #0014ac;
 }
 .loginscreen .login .login_form .lbl,
 .loginscreen .login .register_form .lbl,
@@ -738,6 +870,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  padding: 1rem;
 }
 .loginscreen .login .division::before, .loginscreen .login .division::after,
 .loginscreen .register .division::before,
@@ -783,6 +916,48 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.loginscreen .login .login_register .redesocial-text,
+.loginscreen .login .register_google .redesocial-text,
+.loginscreen .register .login_register .redesocial-text,
+.loginscreen .register .register_google .redesocial-text,
+.registerscreen .login .login_register .redesocial-text,
+.registerscreen .login .register_google .redesocial-text,
+.registerscreen .register .login_register .redesocial-text,
+.registerscreen .register .register_google .redesocial-text {
+  padding-bottom: 1rem;
+}
+.loginscreen .login .login_register .noaccount,
+.loginscreen .login .register_google .noaccount,
+.loginscreen .register .login_register .noaccount,
+.loginscreen .register .register_google .noaccount,
+.registerscreen .login .login_register .noaccount,
+.registerscreen .login .register_google .noaccount,
+.registerscreen .register .login_register .noaccount,
+.registerscreen .register .register_google .noaccount {
+  padding-top: 1rem;
+}
+.loginscreen .login .login_register .noaccount .cad,
+.loginscreen .login .register_google .noaccount .cad,
+.loginscreen .register .login_register .noaccount .cad,
+.loginscreen .register .register_google .noaccount .cad,
+.registerscreen .login .login_register .noaccount .cad,
+.registerscreen .login .register_google .noaccount .cad,
+.registerscreen .register .login_register .noaccount .cad,
+.registerscreen .register .register_google .noaccount .cad {
+  color: #000;
+  text-decoration: none;
+}
+.loginscreen .login .login_register .noaccount .cad:hover,
+.loginscreen .login .register_google .noaccount .cad:hover,
+.loginscreen .register .login_register .noaccount .cad:hover,
+.loginscreen .register .register_google .noaccount .cad:hover,
+.registerscreen .login .login_register .noaccount .cad:hover,
+.registerscreen .login .register_google .noaccount .cad:hover,
+.registerscreen .register .login_register .noaccount .cad:hover,
+.registerscreen .register .register_google .noaccount .cad:hover {
+  text-decoration: underline;
+  color: #0014ac;
+}
 .loginscreen .login .login_register .googleauth .google-logo,
 .loginscreen .login .register_google .googleauth .google-logo,
 .loginscreen .register .login_register .googleauth .google-logo,
@@ -794,4 +969,28 @@ body {
   height: 1.45rem;
   padding: 0.23rem 0.5rem;
   border: 1px solid #000;
+  color: #000;
+}
+.loginscreen .login .login_register .googleauth .google-logo:hover,
+.loginscreen .login .register_google .googleauth .google-logo:hover,
+.loginscreen .register .login_register .googleauth .google-logo:hover,
+.loginscreen .register .register_google .googleauth .google-logo:hover,
+.registerscreen .login .login_register .googleauth .google-logo:hover,
+.registerscreen .login .register_google .googleauth .google-logo:hover,
+.registerscreen .register .login_register .googleauth .google-logo:hover,
+.registerscreen .register .register_google .googleauth .google-logo:hover {
+  color: #0014ac;
+}
+.loginscreen .login .password_requirements,
+.loginscreen .register .password_requirements,
+.registerscreen .login .password_requirements,
+.registerscreen .register .password_requirements {
+  padding: 2rem 0 1rem 0;
+}
+.loginscreen .login .password_requirements .requirements,
+.loginscreen .register .password_requirements .requirements,
+.registerscreen .login .password_requirements .requirements,
+.registerscreen .register .password_requirements .requirements {
+  list-style: circle;
+  padding-left: 1rem;
 }/*# sourceMappingURL=style.css.map */

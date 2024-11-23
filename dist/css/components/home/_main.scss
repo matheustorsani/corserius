@@ -69,12 +69,12 @@
     @media (min-width: 767px){
         .MainDesktop{
             width: 100%;
-        
         .Carrosel{
-            .CarroselDesktop{
-                width: 100%;
-                height: 70vh;
-            }
+            background: url('https://cdn.discordapp.com/attachments/1289706206486593680/1309690601272381541/Black_Friday_1.png?ex=67427fec&is=67412e6c&hm=922263dc71b3b1e32ec0e3f1ba8af20c295d3836dc318b63258efa1cb5024273&') no-repeat center;
+            background-size: cover;
+            background-position: center top;
+            width: 100%;
+            height: 70vh;
         }
         .VejaDesk{
             font-size: 1.4rem;
@@ -99,14 +99,13 @@
                 position: relative;
                 border-radius: 15px;
                 height: 70vh;
+                transition: 0.5s;
                 &:hover{
                     transform: scale(1.1);
-                    transition: 0.9s ease;
                     box-shadow: #000 0px 1px 6px;
                 }
                 .imgDesk{
                     height: auto;
-                    transition: transform 0.5s ease;
                 }
                 .LegendaFotoDesk{
                     text-shadow: #000 0px 0px 10px;
