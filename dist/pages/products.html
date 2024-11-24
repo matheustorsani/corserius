@@ -15,17 +15,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap">
     <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header class="header">
         <div class="search-container">
             <input type="text" class="search-bar" placeholder="Buscar Produto...">
-            <img class="search-icon" src="../img/search.svg" alt="Buscar">
+            <img class="search-icon" src="/dist/img/search.svg" alt="Buscar">
         </div>
         <a class="icon"><img class="icon-svg" src="/dist/img/iconwhite.svg" alt="Logo Corserius"></a>
         <ul class="right-icons">
             <li class="right_item">
-                <a class="login-btn">Entre ou Cadastre-se</a>
+                <p class="login-btn">Entre ou Cadastre-se</p>
             </li>
             <li>
                 <a class="heart">
@@ -54,77 +53,11 @@
                 <li class="item_off">Acessorios</li>
                 <li class="item_off">Calçados</li>
                 <li class="item_off">Intimos</li>
+            </ul>
         </nav>
     </header>
-
-    <main class="main_product">
-
-        <nav class="nav_product">
-            <ul class="Prdlist">
-                <li class="ftsProduto"><a href="#"><img class="ternos" src="../img/ternoazulclarofrente.svg" alt="produto"></li></a>
-                <li class="ftsProduto"><a href="#"><img class="ternos" src="../img/ternoazulescuro.svg" alt="produto"></li></a>
-                <li class="ftsProduto"><a href="#"><img class="ternos" src="../img/ternoazulescurolado.svg" alt="produto"></li></a>
-                <li class="ftsProduto"><a href="#"><img class="ternos" src="../img/ternoazulescurocosta.svg" alt="produto"></li></a>
-                <li class="ftsProduto selecionado"><a href="#"><img class="ternos" src="../img/ternocinzaxadrez.svg" alt="produto"></li></a>
-            </ul>
-            <img src="../img/Ternoxadrez_cinza.svg" alt="produtonatela" class="prdnatela">
-        </nav>
-
-        <div class="infos">
-        <div class="avaliacao">
-            <h1 class="NomeProduto">Terno Xadrez Masculino Classic Corserius Paletó Coleto + Calca De Alfaiataria FF07</h1>
-            <a href="#"class="estrelinhaspd"><img src="../img/Estrelinhas.svg" alt="estrelinhaspd"> 5.0 (19 avaliações)</a>  
-        </div>
-
-        <h1 class="Preçopd">R$1099,90</h1>
-
-        <div class="credit">
-        <img src="../img/creditcard.svg" alt="cartão" class="creditcard">
-        <p>em até 12x vezes de R$91,65</p>
-        </div>
-        <div class="divisioncredit"></div>
-
-        <div class="escolhaproduto">
-            <label for="color-select" class="txtcor">Cor:</label><br>
-            <select id="color-select" class="dropdown">
-                <option value="cinza" class="OptionColor">Cinza</option>
-                <option value="azulClaro" class="OptionColor">Azul Claro</option>
-                <option value="azulEscuto" class="OptionColor">Azul Escuro</option>
-            </select>
-            <br>
-            <div class="size-selector">
-                <p>Tamanho: <span id="selected-size">M/46</span></p>
-                <div class="sizes">
-                    <button class="size-option" for="PP/42">PP/42</button>
-                    <button class="size-option" for="P/44">P/44</button>
-                    <button class="size-option selected" for="M/46">M/46</button>
-                    <button class="size-option" for="G/48">G/48</button>
-                    <button class="size-option" for="GG/50">GG/50</button>
-                    <button class="size-option" for="XGG/52">XGG/52</button>
-                </div>
-            </div>   
-        </div>
-
-        <button class="btncomprar">Adicionar ao carrinho</button>
-
-        <div class="descriptionpd">
-            <img src="../img/shield.svg" alt="shield" class="imgshield"><p class="txtp">Pagamentos e informações estão seguros<br>
-                Site oficial com <u>todos os direitos reservados<u></p>
-        </div>
-        <div class="descriptionpd">
-            <img src="../img/shield.svg" alt="shield" class="imgshield"><p class="txtp">Pagamentos e informações estão seguros<br>
-                Site oficial com <u>todos os direitos reservados<u></p>
-        </div>
-        <div class="descriptionpd">
-            <img src="../img/shield.svg" alt="shield" class="imgshield"><p class="txtp">Pagamentos e informações estão seguros<br>
-                Site oficial com <u>todos os direitos reservados<u></p>
-        </div>
-        
-        <div class="descriptionpd">
-            <img src="../img/" alt="">
-        </div>
-    </div>
-    <!-- HTML DO LOGIN -->
+    <main class="main_products">
+        <!-- HTML DO LOGIN -->
     <section class="loginscreen hidden">
         <div class="login">
             <div class="title">
@@ -150,8 +83,8 @@
             </div>
         </div>
     </section>
-    <!-- HTML DO REGISTER -->
-    <section class="registerscreen hidden">
+     <!-- HTML DO REGISTER -->
+     <section class="registerscreen hidden">
         <div class="register">
             <div class="title">
                 <h1 class="register_title orienta-regular">Cadastro</h1>
@@ -205,6 +138,21 @@
             </form>
         </div>
     </section>
+    
+        <ul class="ul_products">
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-8.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">moletom tecnico corserius <br>$180</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-5.png" alt="produto1" class="img_products"><div class="info_products ovo-regular ovo-regular">moletom tecnico com ziper corserius <br>$200</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-7.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">moletom tecnico com ziper corserius <br>$200</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-15.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">camisa preto corserius <br>$180</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-4.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">calça jogger verde corserius <br>$299</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-17.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">calça jogger tecnina com ziper roxa corserius <br>$299</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-18.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">calça jogger tecnica com ziper mel corserius<br> $299</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-3.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">calça jogger preto corserius <br> $299</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/moleta.jpg" alt="produto1" class="img_products"><div class="info_products ovo-regular">moletom preto corserius <br> $190</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-6.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">calça jogger tecnica corserius <br> $399</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/image-16.png" alt="produto1" class="img_products"><div class="info_products ovo-regular">camisa com textura verde oliva corserius <br>$180</div></a></li>
+            <li class="li_products"><a href="#" class="link_products"><img src="/dist/img/imagensprodutoscorserius/cortajpg.jpg" alt="produto1" class="img_products"><div class="info_products ovo-regular">jaqueta tecnica corserius <br> $499</div></a></li>
+        </ul>
     </main>
     <footer class="footer">
         <nav class="footer_nav">
@@ -251,4 +199,5 @@
     </footer>
 </body>
 <script src="/dist/js/index.js"></script>
+
 </html>

@@ -10,6 +10,7 @@ const closeSignupBtn = document.querySelector(".registerscreen .close_buttom");
 const desktop = document.querySelector(".MainDesktop");
 const entrar = document.querySelector(".register_login");
 const cadastrar = document.querySelector(".cad");
+const productmain = document.querySelector(".product_main");
 
 
 showpass.addEventListener("click", showpassword);
@@ -35,17 +36,20 @@ function close(element) {
 }
 
 
-function blur () {
-    if (!main.className.includes("blur")) {
-        main.classList.add("blur");
-        header.classList.add("blur");
-        footer.classList.add("blur");
-        desktop.classList.add("blur");
-    } else {
-        main.classList.remove("blur");
-        header.classList.remove("blur");
-        footer.classList.remove("blur");
-        desktop.classList.remove("blur");
+function blur () { {
+        if (!main.classList.contains("blur")) {
+            main.classList.add("blur");
+            header.classList.add("blur");
+            footer.classList.add("blur");
+            desktop.classList.add("blur");
+            productmain.classList.add("blur");
+        } else {
+            main.classList.remove("blur");
+            header.classList.remove("blur");
+            footer.classList.remove("blur");
+            desktop.classList.remove("blur");
+            productmain.classList.remove("blur");
+        }
     }
 }
 

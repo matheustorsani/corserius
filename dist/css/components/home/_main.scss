@@ -11,11 +11,27 @@
     .banner {
         height: 70vh;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         background-color: #000;
         overflow: hidden;
         max-width: 100%;
+        position: relative;
+        .carroselmobile{
+            height: 100vh;
+            width: 100%;
+            opacity: 0.3;
+            z-index: 0;
+            object-fit: cover;
+        }
+        .Banner_Text{
+            position: absolute;
+            bottom: 20%;
+            padding: 0rem 0 0 2rem;
+            font-size: 1.5rem;
+            color: #fff;
+            
+        }
     }
 
     .announces {
@@ -56,8 +72,8 @@
             overflow: hidden;
             margin-top: 3rem;
             padding: 0.31rem 1.25rem;
-            background-color: #fff;
-            color: #000;
+            background-color: #000;
+            color: #fff;
             border: 1px solid $colors-dark;
             border-radius: 10px;
             font-size: 1.5rem;
@@ -66,8 +82,8 @@
             max-width: 100%;
 
             &:hover {
-                background-color: #000;
-                color: #fff;
+                background-color: #fff;
+                color: #000;
             }
         }
     }

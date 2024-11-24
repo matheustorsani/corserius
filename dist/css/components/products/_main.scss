@@ -1,0 +1,33 @@
+@import '../../important/responsive';
+
+.main_products{
+    display: flex;
+    justify-content: center;
+    
+    .ul_products{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-around;
+        padding: 2rem 0 2rem 0;
+        align-items: center;
+
+        .li_products{
+           
+            .link_products{
+                text-decoration: none;
+                color: #000;
+                text-align: center;
+                &:hover{
+                    color: #4d4d4d;
+                }
+            }
+            .img_products{ 
+                object-fit: cover;
+                width: 310px;
+                height: 355px;
+                
+            }
+        }
+    }
+}

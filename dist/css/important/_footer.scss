@@ -52,6 +52,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            
 
             .item_links {
                 margin-bottom: 1rem;
@@ -59,27 +60,41 @@
                 a {
                     @include aStyle;
                 }
-
                 &:hover {
                     opacity: 0.9;
                 }
             }
 
         }
+        .items_faq{
+            @media screen and (max-width: 767px) {
+                display: none;
+                
+            }
+        }
 
         .moreSocial {
             display: flex;
             justify-content: center;
             margin-top: 3rem;
-
+            
+            .wrapper{
+                
+                 @media screen and (max-width: 767px) {
+                display: none;
+                
+            }
+            }
             .social {
+                display: flex;
                 .social_item {
                     font-size: 2rem;
-                    color: #fff;
+                    color: #ffffff;
                     overflow: hidden;
                     user-select: none;
                     width: 2.3rem;
                     height: 2.3rem;
+                    padding-left: 1rem;
 
                     &:first-child {
                         padding-left: 0;
@@ -87,7 +102,7 @@
 
                     a {
                         text-decoration: none;
-                        color: #000;
+                        color: #fff;
                     }
                 }
             }
@@ -108,6 +123,7 @@
             gap: 10rem;
 
             .items_aboutus {
+                align-items: start;
                 .item_links {
                     margin: 0;
 
@@ -135,7 +151,7 @@
             .items_faq {
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                align-items: start;
                 flex-direction: column;
 
                 .FAQ {
@@ -164,12 +180,14 @@
                 display: flex;
                 gap: 2rem;
                 flex-direction: column;
-
+                
                 .wrapper {
                     display: flex;
                     gap: 7rem;
                     align-items: center;
                     justify-content: center;
+                    
+                    
                 }
 
                 .social {
@@ -178,6 +196,10 @@
                     flex-direction: row;
                     margin: 0;
                     gap: 1rem;
+
+                    .social_item a{
+                        color: #000000;
+                    }
                 }
 
                 .link {
