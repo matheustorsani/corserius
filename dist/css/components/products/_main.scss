@@ -1,32 +1,38 @@
 @import '../../important/responsive';
 
-.main_products{
+.main_products {
     display: flex;
     justify-content: center;
-    
-    .ul_products{
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
+
+    .ul_products {
+        display: flex;
+        gap: .52rem;
+        flex-grow: 4;
+        flex-wrap: wrap;
         justify-content: space-around;
-        padding: 2rem 0 2rem 0;
+        padding: 2rem 0;
         align-items: center;
 
-        .li_products{
-           
-            .link_products{
+        .li_products {
+            .info_products {
+                user-select: text;
+            }
+
+            .link_products {
                 text-decoration: none;
                 color: #000;
                 text-align: center;
-                &:hover{
+
+                &:hover {
                     color: #4d4d4d;
                 }
             }
-            .img_products{ 
+
+            .img_products {
                 object-fit: cover;
                 width: 310px;
                 height: 355px;
-                
+
             }
         }
     }

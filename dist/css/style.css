@@ -27,6 +27,11 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .blur {
   filter: blur(4px);
 }
@@ -145,13 +150,32 @@ body {
     font-size: 16px;
     cursor: pointer;
     padding: 5px 10px;
-    transition: color 0.3s ease;
     border-left: 1px solid #929292;
   }
   .header .navbar .navlist .item_off:last-child {
     border-right: 1px solid #929292;
   }
   .header .navbar .navlist .item_off:hover {
+    cursor: not-allowed;
+    color: #9c9c9c;
+  }
+  .header .navbar .navlist .item_off:first-child:hover {
+    cursor: pointer;
+  }
+  .header .navbar .navlist .item_off .linkNav {
+    color: #bbb;
+    transition: color 0.3s ease;
+  }
+  .header .navbar .navlist .item_off .linkNav.active {
+    color: #000;
+  }
+  .header .navbar .navlist .item_off .linkNav.active:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #373737;
+  }
+  .header .navbar .navlist .item_off .linkNav:hover {
+    cursor: not-allowed;
     color: #9c9c9c;
   }
   .header .icon {
@@ -560,6 +584,7 @@ body {
   margin: 3rem;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 .descriptionpd .imgshield {
   width: 25px;
@@ -567,15 +592,16 @@ body {
   padding: 10px;
   margin-bottom: 10px;
 }
-.descriptionpd .txtp {
+.descriptionpd .securityPaymant, .descriptionpd .oficialSite {
   padding-top: 5px;
   font-size: 13px;
 }
-.descriptionpd .txtp u {
-  cursor: pointer;
-}
 
 @media (min-width: 767px) {
+  .main1 {
+    display: flex;
+    overflow: hidden;
+  }
   .main_product {
     display: flex;
     height: 100vh;
@@ -594,7 +620,8 @@ body {
     height: 45rem;
   }
   .main_product .infos {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
   }
   .main_product .infos .avaliacao {
     padding-top: 1.2rem;
@@ -604,10 +631,9 @@ body {
     font-size: 20px;
     font-weight: 550;
     display: flex;
-    width: 100%;
   }
   .main_product .infos .avaliacao .estrelinhaspd {
-    display: inline;
+    display: flex;
   }
   .main_product .infos .Preçopd {
     padding: 0 0 0 2.1rem;
@@ -1156,12 +1182,18 @@ body {
   justify-content: center;
 }
 .main_products .ul_products {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  gap: 0.52rem;
+  flex-grow: 4;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
   align-items: center;
+}
+.main_products .ul_products .li_products .info_products {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 .main_products .ul_products .li_products .link_products {
   text-decoration: none;

@@ -85,7 +85,6 @@
                     font-size: 16px;
                     cursor: pointer;
                     padding: 5px 10px;
-                    transition: color 0.3s ease;
                     border-left: 1px solid #929292;
 
                     &:last-child {
@@ -93,7 +92,32 @@
                     }
 
                     &:hover {
+                        cursor: not-allowed;
                         color: #9c9c9c;
+                    }
+
+                    &:first-child:hover {
+                        cursor: pointer;
+                    }
+
+                    .linkNav {
+                        color: #bbb;
+                        transition: color 0.3s ease;
+
+                        &.active {
+                            color: #000;
+
+                            &:hover {
+                                cursor: pointer;
+                                text-decoration: underline;
+                                color: #373737;
+                            }
+                        }
+
+                        &:hover {
+                            cursor: not-allowed;
+                            color: #9c9c9c;
+                        }
                     }
                 }
             }

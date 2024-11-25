@@ -1,6 +1,5 @@
 @import '../../important/responsive';
 
-
 .prdnatela {
     padding-top: 20px;
     width: 100%;
@@ -146,6 +145,7 @@
     margin: 3rem;
     display: flex;
     align-items: center;
+    flex-direction: column;
 
     .imgshield {
         width: 25px;
@@ -154,22 +154,23 @@
         margin-bottom: 10px;
     }
 
-    .txtp {
+    .securityPaymant, .oficialSite {
         padding-top: 5px;
         font-size: 13px;
-    }
-
-    .txtp u {
-        cursor: pointer;
     }
 }
 
 @include responsive {
+    .main1 {
+        display: flex;
+        overflow: hidden;
+    }
+
     .main_product {
         display: flex;
         height: 100vh;
         width: 100%;
-        
+
         .nav_product {
             display: flex;
 
@@ -186,30 +187,35 @@
             }
 
         }
-        .infos{
-            display: inline-block;
-        .avaliacao {
-            padding-top: 1.2rem;
-            width: 70%;
 
-            .NomeProduto {
-                font-size: 20px;
-                font-weight: 550;
-                display: flex;
-                width: 100%;
+        .infos {
+            display: flex;
+            flex-direction: column;
 
+            .avaliacao {
+                padding-top: 1.2rem;
+                width: 70%;
+
+                .NomeProduto {
+                    font-size: 20px;
+                    font-weight: 550;
+                    display: flex;
+                }
+
+                .estrelinhaspd {
+                    display: flex;
+                }
             }
-            .estrelinhaspd {
-                display: inline;
+
+            .Preçopd {
+                padding: 0 0 0 2.1rem;
+                font-size: 2rem;
+                font-weight: bold;
             }
-        } .Preçopd {
-            padding: 0 0 0 2.1rem;
-            font-size: 2rem;
-            font-weight: bold;
+
+            .divisioncredit {
+                margin-bottom: 1rem;
+            }
         }
-        .divisioncredit{
-            margin-bottom: 1rem;
-        }
-    }
     }
 }
