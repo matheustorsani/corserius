@@ -48,6 +48,12 @@ a {
   font-style: normal;
 }
 
+.oranienbaum-regular {
+  font-family: "Oranienbaum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .source-serif-4-semibolditalic {
   font-family: "Source Serif 4", serif;
   font-optical-sizing: auto;
@@ -356,7 +362,7 @@ a {
     font-size: 2rem;
   }
   .footer .footer_nav .items_aboutus .item_links:first-of-type a:hover {
-    cursor: default;
+    cursor: pointer;
     text-decoration: none;
   }
   .footer .footer_nav .items_aboutus .item_links a {
@@ -455,76 +461,182 @@ a {
   display: flex;
   margin: 3rem;
 }
-.main_product .product {
-  display: flex;
-}
-.main_product .product .big {
-  width: 10rem;
-  margin-left: 2rem;
-  border: 1px solid #000;
-}
-.main_product .product .images .listImgs {
+.main_product .product .produtozudo .images {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
-.main_product .product .images .listImgs .active {
+.main_product .product .produtozudo .images .listImgs {
+  display: flex;
+  gap: 0.7rem;
+  flex-direction: row;
+}
+.main_product .product .produtozudo .images .listImgs .list .image {
+  width: 50px;
+  padding: 0.12rem;
+}
+.main_product .product .produtozudo .images .listImgs .active {
   border: 1px solid #000;
 }
-.main_product .product .images .listImgs .list {
-  padding: 0.2rem;
+.main_product .product .produtozudo .images .big {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border: 1px solid #000;
+  margin: 1rem 0;
 }
-.main_product .product .images .listImgs .list .image {
-  width: 2rem;
-}
-.main_product .product .product_info {
+.main_product .product .produtozudo .product_info {
   display: flex;
   flex-direction: column;
   gap: 0.72rem;
   text-transform: uppercase;
-  margin-left: 2rem;
+  height: 100%;
+  width: 100%;
 }
-.main_product .product .product_info .product_options {
+.main_product .product .produtozudo .product_info .product_options {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-.main_product .product .product_info .product_options .sizes {
+.main_product .product .produtozudo .product_info .product_options .sizes {
   margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
 }
-.main_product .product .product_info .product_options .sizes .size {
+.main_product .product .produtozudo .product_info .product_options .sizes .size {
   border: 1px solid #000;
-  border-radius: 2px;
+  border-radius: 6px;
   padding: 0.2rem 0.35rem;
 }
-.main_product .product .product_info .product_options .product_select {
+.main_product .product .produtozudo .product_info .product_options .product_select {
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  width: 6rem;
+  height: 1.7rem;
+}
+.main_product .product .produtozudo .product_info .product_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.main_product .product .produtozudo .product_info .classification {
+  font-size: 0.8rem;
+}
+.main_product .product .produtozudo .product_info .classification::before {
+  content: "⭐⭐⭐⭐⭐ ";
+}
+.main_product .product .produtozudo .product_info .product_price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.main_product .product .produtozudo .product_info .product_price::before {
+  content: "R$ ";
+}
+.main_product .product .produtozudo .product_info .product_price::after {
+  content: " R$470,29 off ";
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+.main_product .product .produtozudo .product_info .product_btn {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 9px;
+  padding: 0.76rem;
   margin-bottom: 1rem;
 }
-.main_product .product .product_info .sizes {
+.main_product .product .produtozudo .paymentMethods {
+  margin-top: 1rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 0.35rem 0;
 }
-.main_product .product .product_info .product_name {
-  font-size: 1.5rem;
-}
-.main_product .product .product_info .product_price {
-  font-size: 1.5rem;
-}
-.main_product .product .product_info .product_description {
-  font-size: 1rem;
-}
-.main_product .product .product_info .quantity {
+.main_product .product .produtozudo .paymentMethods .payment_title {
+  align-items: flex-end;
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  width: auto;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-.main_product .product .product_info .quantity .quantity_input {
-  width: 2rem;
+.main_product .product .produtozudo .paymentMethods .payment_title .card-icon {
+  padding-right: 0.3rem;
 }
-.main_product .product .product_info .add_to_cart {
+.main_product .product .produtozudo .paymentMethods .payment_list {
   display: flex;
-  gap: 1rem;
+  gap: 0.74rem;
+  margin-top: 0.5rem;
+}
+.main_product .product .produtozudo .consultCEP {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 0.4rem 0;
+}
+.main_product .product .produtozudo .consultCEP .consulte {
+  text-transform: none;
+  font-weight: bold;
+}
+.main_product .product .produtozudo .consultCEP .form .input {
+  border: 1px solid #bbb;
+  border-radius: 2px;
+}
+.main_product .product .produtozudo .consultCEP .form .input::-moz-placeholder {
+  color: #bbb;
+  font-size: 0.68rem;
+}
+.main_product .product .produtozudo .consultCEP .form .input::placeholder {
+  color: #bbb;
+  font-size: 0.68rem;
+}
+.main_product .product .produtozudo .consultCEP .form .btn {
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
+@media (min-width: 767px) {
+  .main_product {
+    justify-content: center;
+  }
+  .main_product .product .produtozudo {
+    display: flex;
+  }
+  .main_product .product .produtozudo .images {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .main_product .product .produtozudo .images .listImgs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .main_product .product .produtozudo .images .listImgs .active {
+    border: 1px solid #000;
+  }
+  .main_product .product .produtozudo .images .listImgs .list {
+    padding: 0.2rem;
+  }
+  .main_product .product .produtozudo .images .listImgs .list .image {
+    width: 4rem;
+  }
+  .main_product .product .produtozudo .images .big {
+    width: auto;
+    margin: 0 2rem;
+  }
+}
 .MainDesktop {
   display: none;
 }
@@ -543,9 +655,7 @@ a {
   position: relative;
 }
 .main .banner .carroselmobile {
-  height: 100vh;
   width: 100%;
-  opacity: 0.3;
   z-index: 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -613,12 +723,12 @@ a {
     width: 100%;
     display: block;
   }
-  .MainDesktop .Carrosel {
-    background: url("https://cdn.discordapp.com/attachments/1289706206486593680/1309690601272381541/Black_Friday_1.png?ex=67427fec&is=67412e6c&hm=922263dc71b3b1e32ec0e3f1ba8af20c295d3836dc318b63258efa1cb5024273&") no-repeat center;
-    background-size: cover;
-    background-position: center top;
+  .MainDesktop .CarroselMob .banner .carroselmobile {
+    -webkit-clip-path: inset(0 0 15% 0);
+            clip-path: inset(0 0 15% 0);
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
-    height: 70vh;
   }
   .MainDesktop .VejaDesk {
     font-size: 1.4rem;
@@ -1061,6 +1171,7 @@ a {
 .main_products {
   display: flex;
   justify-content: center;
+  margin: 2rem;
 }
 .main_products .ul_products {
   display: flex;

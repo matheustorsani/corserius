@@ -17,20 +17,20 @@
         overflow: hidden;
         max-width: 100%;
         position: relative;
-        .carroselmobile{
-            height: 100vh;
+
+        .carroselmobile {            
             width: 100%;
-            opacity: 0.3;
             z-index: 0;
             object-fit: cover;
         }
-        .Banner_Text{
+
+        .Banner_Text {
             position: absolute;
             bottom: 20%;
             padding: 0rem 0 0 2rem;
             font-size: 1.5rem;
             color: #fff;
-            
+
         }
     }
 
@@ -98,12 +98,12 @@
         width: 100%;
         display: block;
 
-        .Carrosel {
-            background: url('https://cdn.discordapp.com/attachments/1289706206486593680/1309690601272381541/Black_Friday_1.png?ex=67427fec&is=67412e6c&hm=922263dc71b3b1e32ec0e3f1ba8af20c295d3836dc318b63258efa1cb5024273&') no-repeat center;
-            background-size: cover;
-            background-position: center top;
-            width: 100%;
-            height: 70vh;
+        .CarroselMob .banner {
+            .carroselmobile {
+                clip-path: inset(0 0 15% 0);
+                object-fit: cover;
+                width: 100%;
+            }
         }
 
         .VejaDesk {

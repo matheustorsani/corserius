@@ -13,6 +13,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
 </head>
 
@@ -77,7 +78,7 @@
             <div class="div_announces">
                 <h1 class="announce source-serif-4-semibolditalic">Black Friday</h1>
                 <h3 class="announce_content source-serif-4-lightitalic">Explore nossas promoções da Black Friday</h3>
-                <p class="btn_explore source-serif-4-lightitalic">Ver Coleção</p>
+                <a href="dist/pages/products.html" class="btn_explore source-serif-4-lightitalic">Ver Coleção</a>
             </div>
         </section>
     </main>
@@ -165,9 +166,11 @@
 
     <!-- Conteudo para desktop -->
     <main class="MainDesktop">
-        <div class="Carrosel">
-            <a href="#" class="linkCarrosel"></a>
-        </div>
+        <section class="CarroselMob">
+            <div class="banner">
+                <img src="./dist/img/bf.png" alt="Carrosel" class="carroselmobile">
+            </div>
+        </section>
         <h1 class="VejaDesk">Veja Tambem!</h1>
 
         <div class="secaoCategoria">
@@ -197,7 +200,7 @@
     <footer class="footer">
         <nav class="footer_nav">
             <ul class="items_aboutus">
-                <li class="item_links essential"><a href="#">Sobre Nós</a></li>
+                <li class="item_links essential"><a href="./dist/pages/aboutus.html">Sobre Nós</a></li>
                 <li class="item_links essential"><a href="#">Encontre a loja</a></li>
                 <li class="item_links"><a href="#">Fale Conosco</a></li>
                 <li class="item_links"><a href="#">Patrocinios e Projetos</a></li>

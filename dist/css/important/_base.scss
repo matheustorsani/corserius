@@ -16,6 +16,7 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 
     @media (hover: none) and (pointer: coarse) {
+
         html,
         body {
             user-select: text;
@@ -47,6 +48,12 @@ a {
 
 .oldenburg-regular {
     font-family: "Oldenburg", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.oranienbaum-regular {
+    font-family: "Oranienbaum", serif;
     font-weight: 400;
     font-style: normal;
 }
