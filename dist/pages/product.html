@@ -61,15 +61,56 @@
         <section class="product">
             <nav class="images">
                 <ul class="listImgs">
+                    <li class="list active"><img src="../img/cart.svg" alt="Moletom" class="image"></li>
                     <li class="list"><img src="../img/cart.svg" alt="Moletom" class="image"></li>
                     <li class="list"><img src="../img/cart.svg" alt="Moletom" class="image"></li>
                     <li class="list"><img src="../img/cart.svg" alt="Moletom" class="image"></li>
                     <li class="list"><img src="../img/cart.svg" alt="Moletom" class="image"></li>
                     <li class="list"><img src="../img/cart.svg" alt="Moletom" class="image"></li>
-                    <li class="list"><img src="../img/cart.svg" alt="Moletom" class="image"></li>
-                    <li class="list"><img src="../img/cart.svg" alt="Moletom" class="image big"></li>
                 </ul>
             </nav>
+            <img class="image big" src="../img/cart.svg" alt="Produto">
+            <div class="product_info">
+                <h1 class="product_title">MOLETOM COM ZÍPER NA GOLA</h1>
+                <p class="product_price">R$ 99,99</p>
+                <p class="product_description">Descrição do produto</p>
+                <div class="product_options">
+                    <label class="lblc" for="color">Cor</label>
+                    <select name="color" id="color" class="product_select">
+                        <option value="preto">Preto</option>
+                        <option value="branco">Branco</option>
+                        <option value="cinza">Cinza</option>
+                        <option value="azul">Azul</option>
+                        <option value="vermelho">Vermelho</option>
+                    </select>
+                    <label class="lblc" for="size">Tamanho</label>
+                    <ul class="sizes">
+                        <li class="size">PP/42</li>
+                        <li class="size">P/44</li>
+                        <li class="size">M/46</li>
+                        <li class="size">G/48</li>
+                        <li class="size">GG/50</li>
+                    </ul>
+                    <button class="product_btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="paymentMethods">
+                <h2 class="payment_title"><i class="fa-solid fa-credit-card"></i>Formas de Pagamento</h2>
+                <ul class="payment_list">
+                    <li class="payment_item"><i class="fa-brands fa-cc-visa"></i></li>
+                    <li class="payment_item"><i class="fa-brands fa-cc-mastercard"></i></li>
+                    <li class="payment_item"><i class="fa-brands fa-pix"></i></li>
+                    <li class="payment_item"></li>
+                    <li class="payment_item"></li>
+                </ul>
+            </div>
+            <div class="class">
+                <h2 class="consulte">Calcule o prazo de entrega</h2>
+                <form class="form">
+                    <input type="text" class="input" id="cep" name="cep" placeholder="Insira o CEP">
+                    <button class="btn">Calcular</button>
+                </form>
+            </div>
         </section>
     </main>
 
