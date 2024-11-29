@@ -1206,12 +1206,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
   width: 100%;
   flex-wrap: wrap;
+  margin: 2rem;
 }
 .Main_FaleConosco .Titulo_info {
-  text-align: left;
   font-size: 3rem;
   padding-right: 8rem;
   line-height: 3rem;
@@ -1253,7 +1252,8 @@ a {
 }
 .Main_FaleConosco .Consult .forms_consult .descricao_consult {
   border-radius: 1rem;
-  height: 10vh;
+  width: 27rem;
+  height: 10rem;
   background-color: #D9D9D9;
   resize: none;
 }
