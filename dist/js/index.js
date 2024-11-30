@@ -56,7 +56,3 @@ elements.cadastrar.addEventListener("click", () => {
     OpCl(elements.login);
     OpCl(elements.signup);
 });
-
-
-
-

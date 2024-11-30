@@ -1281,4 +1281,42 @@ a {
 .Main_FaleConosco .Consult .forms_consult .btn_consult:hover {
   background-color: #fff;
   color: #000;
+}
+
+.main_aboutus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+.main_aboutus .aboutus_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+.main_aboutus .aboutus_logo {
+  width: 8rem;
+  margin: 1rem;
+}
+.main_aboutus .aboutus_title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem;
+  border-bottom: 1px solid #000;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (min-width: 767px) {
+  .main_aboutus {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }/*# sourceMappingURL=style.css.map */

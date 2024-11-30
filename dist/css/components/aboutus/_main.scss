@@ -1,0 +1,41 @@
+@import '../../important/responsive';
+
+.main_aboutus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    flex-wrap: wrap;
+
+    .aboutus_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .aboutus_logo {
+        width: 8rem;
+        margin: 1rem;
+    }
+
+    .aboutus_title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 1rem;
+        border-bottom: 1px solid #000;
+        width: fit-content;
+    }
+}
+
+@include responsive {
+    .main_aboutus {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
