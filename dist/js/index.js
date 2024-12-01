@@ -3,14 +3,18 @@ const elements = {
     loginbtn: document.querySelector(".login-btn"),
     login: document.querySelector(".loginscreen"),
     signup: document.querySelector(".registerscreen"),
-    main: document.querySelector("main"),
+    main: document.querySelectorAll("main"),
     header: document.querySelector("header"),
     footer: document.querySelector("footer"),
     closeLoginBtn: document.querySelector(".loginscreen .close_buttom"),
     closeSignupBtn: document.querySelector(".registerscreen .close_buttom"),
     entrar: document.querySelector(".register_login"),
-    cadastrar: document.querySelector(".cad")
+    cadastrar: document.querySelector(".cad"),
+    faq: document.querySelectorAll(".Faq_item"),
+    faqtext: document.querySelectorAll(".Faq_text")
 };
+
+
 
 elements.showpass.addEventListener("click", tgPass);
 
@@ -27,9 +31,9 @@ function OpCl(element) {
 }
 
 function blur() {
-    elements.main.classList.toggle("blur");
-    elements.header.classList.toggle("blur");
-    elements.footer.classList.toggle("blur");
+    [elements.header, elements.footer, ...elements.main].forEach(el => {
+        el.classList.toggle("blur");
+    });
 }
 
 elements.loginbtn.addEventListener("click", () => {
@@ -55,4 +59,10 @@ elements.entrar.addEventListener("click", () => {
 elements.cadastrar.addEventListener("click", () => {
     OpCl(elements.login);
     OpCl(elements.signup);
+});
+
+[...elements.faq].forEach((el, i) => {
+    el.addEventListener("click", () => {
+        OpCl(elements.faqtext[i]);
+    });
 });

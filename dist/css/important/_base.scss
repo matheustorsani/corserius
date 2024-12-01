@@ -35,6 +35,9 @@ a {
 //       color: $text-dark;
 //     }
 // }
+.hidden {
+    display: none !important;
+}
 
 .blur {
     filter: blur(4px);

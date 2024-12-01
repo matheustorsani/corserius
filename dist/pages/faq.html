@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Corserius - Fale Conosco</title>
-        <link rel="stylesheet" href="/dist/css/reset.css">
-        <link rel="stylesheet" href="/dist/css/style.css">
-        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap">
-        <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corserius - Fale Conosco</title>
+    <link rel="stylesheet" href="/dist/css/reset.css">
+    <link rel="stylesheet" href="/dist/css/style.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
     <header class="header">
         <div class="search-container">
@@ -138,39 +140,71 @@
             </form>
         </div>
     </section>
-    
+
     <main class="Main_FaleConosco">
+        <section class="Faq">
+            <h1 class="Faq_title oldenburg-regular">Perguntas Frequentes</h1>
+            <div class="Faq_content">
+                <div class="Faq_item">
+                    <h2 class="Faq_subtitle oldenburg-regular">Como faço para trocar um produto?</h2>
+                    <p class="Faq_text orienta-regular">Para trocar um produto, você deve entrar em contato com a nossa
+                        central de atendimento e solicitar a troca do produto. A troca só será realizada se o produto
+                        estiver em perfeito estado e com a etiqueta de troca.</p>
+                </div>
+                <div class="Faq_item">
+                    <h2 class="Faq_subtitle oldenburg-regular">Como faço para devolver um produto?</h2>
+                    <p class="Faq_text orienta-regular hidden">Para devolver um produto, você deve entrar em contato com a
+                        nossa central de atendimento e solicitar a devolução do produto. A devolução só será realizada
+                        se o produto estiver em perfeito estado e com a etiqueta de devolução.</p>
+                </div>
+                <div class="Faq_item">
+                    <h2 class="Faq_subtitle oldenburg-regular">Como faço para rastrear o meu pedido?</h2>
+                    <p class="Faq_text orienta-regular hidden">Para rastrear o seu pedido, você deve acessar a sua conta e
+                        clicar na opção "Meus Pedidos". Lá você encontrará todas as informações sobre o seu pedido, como
+                        o status de entrega e o código de rastreamento.</p>
+                </div>
+                <div class="Faq_item">
+                    <h2 class="Faq_subtitle oldenburg-regular">Como faço para cancelar um pedido?</h2>
+                    <p class="Faq_text orienta-regular hidden">Para cancelar um pedido, você deve entrar em contato com a nossa
+                        central de atendimento e solicitar o cancelamento do pedido. O cancelamento só será realizado se
+                        o pedido ainda não tiver sido enviado.</p>
+                </div>
+            </div>
+        </section>
+        <section class="infos">
         <div class="Titulo_info">
-            <P class="text_info oldenburg-regular">fale conosco.</P>
+            <P class="text_info oldenburg-regular">Não achou oque procurava?</P>
             <p class="text_info oldenburg-regular">Informe-nos sobre o</p>
             <p class="text_info oldenburg-regular">que você requisita</p>
-            <p class="email orienta-regular">E-mail da empresa: <br> <i class="icone fa-regular fa-envelope"></i><a href="#" class="email_link">corserius.empresa@gmail.com</a></p>
+            <p class="email orienta-regular">E-mail da empresa: <br> <i class="icone fa-regular fa-envelope"></i><a
+                    href="#" class="email_link">corserius.empresa@gmail.com</a></p>
         </div>
 
         <div class="division_screen"></div>
 
         <div class="Consult">
-        <h2 class="Contat_title oldenburg-regular">Contate-nos</h2>
-        <form action="#" method="post" class="forms_consult">
-            <label for="email-titulo" class="label_Consult">Email:</label>
-            <input type="text" name="email" placeholder="digite seu email" id="email_consult" class="input_consult">
-            <label for="CPF" class="label_Consult">CPF</label>
-            <input type="text" name="CPF" placeholder="digite seu CPF" id="CPF" class="input_consult">
-            <label for="Nome" class="label_Consult">Nome Inteiro</label>
-            <input type="text" name="Nome" placeholder="digite seu nome" id="nome" class="input_consult">
-            <label for="Problema" class="label_Consult">Descreva o Problema</label>
-            <textarea name="Problema" id="Problema" cols="30" rows="10" placeholder="Descreva o problema" class="descricao_consult"></textarea>
-            <button type="submit" class="btn_consult">Mande sua Mensagem</button> 
-        </div>           
+            <h2 class="Contat_title oldenburg-regular">Contate-nos</h2>
+            <form action="#" method="post" class="forms_consult">
+                <label for="email-titulo" class="label_Consult">Email:</label>
+                <input type="text" name="email" placeholder="digite seu email" id="email_consult" class="input_consult">
+                <label for="CPF" class="label_Consult">CPF:</label>
+                <input type="text" name="CPF" placeholder="digite seu CPF" id="CPF" class="input_consult">
+                <label for="Nome" class="label_Consult">Nome Inteiro:</label>
+                <input type="text" name="Nome" placeholder="digite seu nome" id="nome" class="input_consult">
+                <label for="Problema" class="label_Consult">Descreva o Problema:</label>
+                <textarea name="Problema" id="Problema" cols="30" rows="10" placeholder="Descreva o problema"
+                    class="descricao_consult"></textarea>
+                <button type="submit" class="btn_consult">Mande sua Mensagem</button>
+        </div>
         </form>
-
+</section>
 
     </main>
 
     <footer class="footer">
         <nav class="footer_nav">
             <ul class="items_aboutus">
-                <li class="item_links essential"><a href="./dist/pages/aboutus.html">Sobre Nós</a></li>
+                <li class="item_links essential"><a href="./aboutus.html">Sobre Nós</a></li>
                 <li class="item_links essential"><a href="#">Encontre a loja</a></li>
                 <li class="item_links"><a href="#">Fale Conosco</a></li>
                 <li class="item_links"><a href="#">Patrocinios e Projetos</a></li>
@@ -211,4 +245,5 @@
         <p class="copy">&copy; Todos os direitos Reservados. Corserius & SmokayDevs.</p>
     </footer>
 </body>
+<script src="../js/index.js"></script>
 </html>

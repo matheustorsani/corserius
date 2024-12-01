@@ -1,55 +1,109 @@
 @import '../../important/responsive';
 
-.Main_FaleConosco{
+.Main_FaleConosco {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
+    justify-content: center;
     margin: 2rem;
-    .Titulo_info{
-        font-size: 3rem;
-        padding-right: 8rem;
-        line-height: 3rem;
 
-        .email{
-            font-size: 1rem;
-            line-height: 1.3rem;
-            padding: 2rem 0 0 1rem;
-            .icone{
-                padding-right: 0.5rem;
+    .Faq {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 1;
+
+        .Faq_title {
+            font-size: 2.5rem;
+            padding: 2rem 0;
+        }
+
+        .Faq_content {
+            padding: 2rem 0;
+
+            .Faq_item {
+                padding: 1rem 0;
+
+                .Faq_subtitle {
+                    font-size: 1.5rem;
+                    padding: 1rem 0;
+                    position: relative;
+                    cursor: pointer;
+                    width: fit-content;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        width: 0;
+                        height: 1px;
+                        background-color: black;
+                        transition: width 1s, left 1s;
+                    }
+
+                    &:hover::after {
+                        
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+
+                .Faq_text {
+                    font-size: 1.2rem;
+                    padding: 1rem 0;
+
+                }
             }
-            .email_link{
+
+        }
+    }
+
+    .Titulo_info {
+        font-size: 2.5rem;
+
+        .email {
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+
+            .email_link {
                 color: blue;
-                &:hover{
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: normal;
+
+                &:hover {
                     text-decoration: underline;
                 }
             }
         }
     }
 
-    .division_screen{
-        background-color: #000;
-        width: 0.1rem;
-        height: 430px;
+    .division_screen {
+        margin: 2rem;
+        background-color: #595959;
+        width: 90%;
+        height: 1px;
     }
 
-    .Consult{
-        margin-top: 6rem;
+    .Consult {
         display: flex;
-        flex-direction: column; 
-        max-width: 400px; 
-        width: 100%;
-        padding-left: 4rem;
+        flex-direction: column;
 
-        .Contat_title{
-            font-size: 2rem;
-        }.forms_consult{
+        .Contat_title {
+            padding: 0 0 2rem 0;
+            font-size: 2.4rem;
+        }
+
+        .forms_consult {
             display: flex;
+            justify-content: start;
             flex-direction: column;
-            width: 100%;
 
-            .descricao_consult{
+            .descricao_consult {
                 border-radius: 1rem;
                 width: 27rem;
                 height: 10rem;
@@ -57,18 +111,27 @@
                 resize: none;
             }
 
-            .label_consult{
-                font-size: 1.2rem;
-           
+            .label_Consult {
+                font-size: 1.5rem;
+                padding: 1rem 0 1rem 0;
             }
-            .input_consult{
-                margin: 1rem 0;
-                padding: 0.5rem;
+
+            .input_consult {
+                width: 100%;
                 border: none;
+                transition: 0.5s;
                 border-bottom: 1px solid #000;
-                
+
+                &:focus {
+                    outline: none;
+
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
             }
-            .btn_consult{
+
+            .btn_consult {
                 background-color: #000;
                 color: #fff;
                 border: none;
@@ -77,13 +140,148 @@
                 border-radius: 1rem;
                 cursor: pointer;
                 margin-top: 1rem;
-                align-self: center;
                 transition: 0.7s;
-                &:hover{
+                align-self: center;
+
+                &:hover {
                     background-color: #fff;
                     color: #000;
                 }
             }
         }
+    }
+}
+
+@include responsive {
+
+    .Main_FaleConosco {
+
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 2rem;
+
+        .Faq {
+            flex-direction: column;
+            font-size: 2rem;
+            width: 50%;
+            display: flex;
+            
+
+            .Faq_title{
+                font-size: 3rem;
+                align-self: center;
+            }
+            .Faq_item {
+
+
+                .Faq_subtitle {
+                    font-size: 1.5rem;
+                    position: relative;
+                    cursor: pointer;
+
+                   
+                }
+
+                .Faq_text {
+                    
+                    font-size: 1.2rem;
+                    padding: 1rem 0;
+                }
+            }
+        }
+
+        .infos {
+            display: flex;
+            align-items: center;
+            
+            .Titulo_info {
+                font-size: 3rem;
+                padding-right: 8rem;
+                line-height: 3rem;
+
+                .email {
+                    font-size: 1rem;
+                    line-height: 1.3rem;
+                    padding: 2rem 0 0 1rem;
+
+                    .icone {
+                        padding-right: 0.5rem;
+                    }
+
+                    .email_link {
+                        color: blue;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .division_screen {
+                background-color: #000;
+                width: 0.1rem;
+                height: 430px;
+            }
+
+            .Consult {
+                margin-top: 6rem;
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                width: 100%;
+                padding-left: 4rem;
+
+                .Contat_title {
+                    font-size: 2rem;
+                }
+
+                .forms_consult {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .descricao_consult {
+                        border-radius: 1rem;
+                        width: 27rem;
+                        height: 10rem;
+                        background-color: #D9D9D9;
+                        resize: none;
+                    }
+
+                    .label_Consult {
+                        font-size: 1rem;
+                        padding: 0.5rem 0 0rem 0;
+
+                    }
+
+                    .input_consult {
+                        margin: 1rem 0;
+                        border: none;
+                        border-bottom: 1px solid #000;
+                    }
+
+                    .btn_consult {
+                        background-color: #000;
+                        color: #fff;
+                        border: none;
+                        padding: 1rem;
+                        width: 15rem;
+                        border-radius: 1rem;
+                        cursor: pointer;
+                        margin-top: 1rem;
+                        align-self: center;
+                        transition: 0.7s;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

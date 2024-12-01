@@ -32,6 +32,10 @@ a {
   color: #000;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .blur {
   filter: blur(4px);
 }
@@ -774,10 +778,6 @@ a {
     transform: translate(-50%, -50%);
   }
 }
-.hidden {
-  display: none !important;
-}
-
 .title {
   width: 100%;
   height: 100%;
@@ -1204,51 +1204,90 @@ a {
 
 .Main_FaleConosco {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
+  justify-content: center;
   margin: 2rem;
 }
+.Main_FaleConosco .Faq {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.Main_FaleConosco .Faq .Faq_title {
+  font-size: 2.5rem;
+  padding: 2rem 0;
+}
+.Main_FaleConosco .Faq .Faq_content {
+  padding: 2rem 0;
+}
+.Main_FaleConosco .Faq .Faq_content .Faq_item {
+  padding: 1rem 0;
+}
+.Main_FaleConosco .Faq .Faq_content .Faq_item .Faq_subtitle {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  position: relative;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Main_FaleConosco .Faq .Faq_content .Faq_item .Faq_subtitle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: width 1s, left 1s;
+}
+.Main_FaleConosco .Faq .Faq_content .Faq_item .Faq_subtitle:hover::after {
+  width: 100%;
+  left: 0;
+}
+.Main_FaleConosco .Faq .Faq_content .Faq_item .Faq_text {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
 .Main_FaleConosco .Titulo_info {
-  font-size: 3rem;
-  padding-right: 8rem;
-  line-height: 3rem;
+  font-size: 2.5rem;
 }
 .Main_FaleConosco .Titulo_info .email {
-  font-size: 1rem;
-  line-height: 1.3rem;
-  padding: 2rem 0 0 1rem;
-}
-.Main_FaleConosco .Titulo_info .email .icone {
-  padding-right: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 .Main_FaleConosco .Titulo_info .email .email_link {
   color: blue;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
 }
 .Main_FaleConosco .Titulo_info .email .email_link:hover {
   text-decoration: underline;
 }
 .Main_FaleConosco .division_screen {
-  background-color: #000;
-  width: 0.1rem;
-  height: 430px;
+  margin: 2rem;
+  background-color: #595959;
+  width: 90%;
+  height: 1px;
 }
 .Main_FaleConosco .Consult {
-  margin-top: 6rem;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  width: 100%;
-  padding-left: 4rem;
 }
 .Main_FaleConosco .Consult .Contat_title {
-  font-size: 2rem;
+  padding: 0 0 2rem 0;
+  font-size: 2.4rem;
 }
 .Main_FaleConosco .Consult .forms_consult {
   display: flex;
+  justify-content: start;
   flex-direction: column;
-  width: 100%;
 }
 .Main_FaleConosco .Consult .forms_consult .descricao_consult {
   border-radius: 1rem;
@@ -1257,14 +1296,24 @@ a {
   background-color: #D9D9D9;
   resize: none;
 }
-.Main_FaleConosco .Consult .forms_consult .label_consult {
-  font-size: 1.2rem;
+.Main_FaleConosco .Consult .forms_consult .label_Consult {
+  font-size: 1.5rem;
+  padding: 1rem 0 1rem 0;
 }
 .Main_FaleConosco .Consult .forms_consult .input_consult {
-  margin: 1rem 0;
-  padding: 0.5rem;
+  width: 100%;
   border: none;
+  transition: 0.5s;
   border-bottom: 1px solid #000;
+}
+.Main_FaleConosco .Consult .forms_consult .input_consult:focus {
+  outline: none;
+}
+.Main_FaleConosco .Consult .forms_consult .input_consult:focus::-moz-placeholder {
+  color: transparent;
+}
+.Main_FaleConosco .Consult .forms_consult .input_consult:focus::placeholder {
+  color: transparent;
 }
 .Main_FaleConosco .Consult .forms_consult .btn_consult {
   background-color: #000;
@@ -1275,14 +1324,117 @@ a {
   border-radius: 1rem;
   cursor: pointer;
   margin-top: 1rem;
-  align-self: center;
   transition: 0.7s;
+  align-self: center;
 }
 .Main_FaleConosco .Consult .forms_consult .btn_consult:hover {
   background-color: #fff;
   color: #000;
 }
 
+@media (min-width: 767px) {
+  .Main_FaleConosco {
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 2rem;
+  }
+  .Main_FaleConosco .Faq {
+    flex-direction: column;
+    font-size: 2rem;
+    width: 50%;
+    display: flex;
+  }
+  .Main_FaleConosco .Faq .Faq_title {
+    font-size: 3rem;
+    align-self: center;
+  }
+  .Main_FaleConosco .Faq .Faq_item .Faq_subtitle {
+    font-size: 1.5rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .Main_FaleConosco .Faq .Faq_item .Faq_text {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+  .Main_FaleConosco .infos {
+    display: flex;
+    align-items: center;
+  }
+  .Main_FaleConosco .infos .Titulo_info {
+    font-size: 3rem;
+    padding-right: 8rem;
+    line-height: 3rem;
+  }
+  .Main_FaleConosco .infos .Titulo_info .email {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 2rem 0 0 1rem;
+  }
+  .Main_FaleConosco .infos .Titulo_info .email .icone {
+    padding-right: 0.5rem;
+  }
+  .Main_FaleConosco .infos .Titulo_info .email .email_link {
+    color: blue;
+  }
+  .Main_FaleConosco .infos .Titulo_info .email .email_link:hover {
+    text-decoration: underline;
+  }
+  .Main_FaleConosco .infos .division_screen {
+    background-color: #000;
+    width: 0.1rem;
+    height: 430px;
+  }
+  .Main_FaleConosco .infos .Consult {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    padding-left: 4rem;
+  }
+  .Main_FaleConosco .infos .Consult .Contat_title {
+    font-size: 2rem;
+  }
+  .Main_FaleConosco .infos .Consult .forms_consult {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Main_FaleConosco .infos .Consult .forms_consult .descricao_consult {
+    border-radius: 1rem;
+    width: 27rem;
+    height: 10rem;
+    background-color: #D9D9D9;
+    resize: none;
+  }
+  .Main_FaleConosco .infos .Consult .forms_consult .label_Consult {
+    font-size: 1rem;
+    padding: 0.5rem 0 0rem 0;
+  }
+  .Main_FaleConosco .infos .Consult .forms_consult .input_consult {
+    margin: 1rem 0;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+  .Main_FaleConosco .infos .Consult .forms_consult .btn_consult {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-self: center;
+    transition: 0.7s;
+  }
+  .Main_FaleConosco .infos .Consult .forms_consult .btn_consult:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
 .main_aboutus {
   display: flex;
   flex-direction: column;
