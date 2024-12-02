@@ -8,30 +8,32 @@
     margin: 2rem;
 
     .Faq {
-        width: 100%;
+        margin: 1rem;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        flex-wrap: wrap;
-        flex-grow: 1;
 
         .Faq_title {
             font-size: 2.5rem;
-            padding: 2rem 0;
+            text-align: center;
         }
 
         .Faq_content {
             padding: 2rem 0;
 
             .Faq_item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 padding: 1rem 0;
+                text-align: center;
 
                 .Faq_subtitle {
                     font-size: 1.5rem;
                     padding: 1rem 0;
                     position: relative;
                     cursor: pointer;
-                    width: fit-content;
 
                     &::after {
                         content: '';
@@ -41,11 +43,11 @@
                         width: 0;
                         height: 1px;
                         background-color: black;
-                        transition: width 1s, left 1s;
+                        transition: width 0.5s, left 0.5s;
                     }
 
                     &:hover::after {
-                        
+
                         width: 100%;
                         left: 0;
                     }
@@ -53,11 +55,20 @@
 
                 .Faq_text {
                     font-size: 1.2rem;
-                    padding: 1rem 0;
+                    overflow: hidden;
+                    max-height: 0;
+                    opacity: 0;
+                    padding: 0;
+                    transition: all 0.3s ease-in-out;
+                    display: block;
 
+                    &:not(.hidden) {
+                        max-height: 500px;
+                        opacity: 1;
+                        padding: 1rem 0;
+                    }
                 }
             }
-
         }
     }
 
@@ -166,27 +177,18 @@
             font-size: 2rem;
             width: 50%;
             display: flex;
-            
+            justify-content: center;
+            align-items: center;
 
-            .Faq_title{
+            .Faq_title {
                 font-size: 3rem;
-                align-self: center;
             }
+
             .Faq_item {
-
-
                 .Faq_subtitle {
                     font-size: 1.5rem;
                     position: relative;
                     cursor: pointer;
-
-                   
-                }
-
-                .Faq_text {
-                    
-                    font-size: 1.2rem;
-                    padding: 1rem 0;
                 }
             }
         }
@@ -194,7 +196,7 @@
         .infos {
             display: flex;
             align-items: center;
-            
+
             .Titulo_info {
                 font-size: 3rem;
                 padding-right: 8rem;

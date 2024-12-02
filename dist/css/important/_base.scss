@@ -35,8 +35,9 @@ a {
 //       color: $text-dark;
 //     }
 // }
+
 .hidden {
-    display: none !important;
+    max-width: 0;
 }
 
 .blur {
