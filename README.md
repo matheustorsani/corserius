@@ -3,6 +3,8 @@
 
 Site feito para um trabalho escolar (PI).
 
+[Acesse o site](https://corserius.vercel.app)
+
 
 ## Autores
 
@@ -19,6 +21,8 @@ Site feito para um trabalho escolar (PI).
 **Back-End:** .NET (Windows Forms), C#
 
 **Design:** Figma, CorelDraw
+
+
 ## Aplicativo (Forms)
 
- - Sem Repositório no momento. (WIP)
+ - [Aplicativo Corserius](https://github.com/Tavinzn/Corserius-Forms)
