@@ -172,6 +172,13 @@
             }
             .lbl {
                 @include form-label;
+                .olinho::before {
+                    content: '👁️';
+                    cursor: pointer;
+                    padding-left: 0.5rem;
+                    
+                }
+                
             }
 
             .login_input,
