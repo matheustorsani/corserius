@@ -8,10 +8,11 @@
     margin: 2rem;
 
     .Faq {
-        margin: 1rem;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        flex-wrap: wrap;
+        overflow: hidden;
 
         .Faq_title {
             font-size: 2.5rem;
@@ -72,6 +73,14 @@
         }
     }
 
+    .infos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 2rem;
+        width: 100%;
+    }
+
     .Titulo_info {
         font-size: 2.5rem;
 
@@ -116,7 +125,7 @@
 
             .descricao_consult {
                 border-radius: 1rem;
-                width: 27rem;
+                width: auto;
                 height: 10rem;
                 background-color: #D9D9D9;
                 resize: none;
@@ -196,7 +205,8 @@
         .infos {
             display: flex;
             align-items: center;
-
+            justify-content: center;
+            flex-direction: row;
             .Titulo_info {
                 font-size: 3rem;
                 padding-right: 8rem;

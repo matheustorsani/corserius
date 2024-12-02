@@ -313,11 +313,6 @@ a {
   justify-content: center;
   margin-top: 3rem;
 }
-@media screen and (max-width: 767px) {
-  .footer .footer_nav .moreSocial .wrapper {
-    display: none;
-  }
-}
 .footer .footer_nav .moreSocial .social {
   display: flex;
 }
@@ -445,7 +440,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000;
     gap: 0.5rem;
   }
   .footer .footer_nav .moreSocial .link:hover {
@@ -456,13 +450,13 @@ a {
   }
   .footer .footer_nav .moreSocial .link .icon {
     height: 30px;
+    width: 30px;
   }
   .copy {
     color: #000 !important;
   }
 }
 .main_product {
-  display: flex;
   margin: 3rem;
 }
 .main_product .product .produtozudo .images {
@@ -612,6 +606,7 @@ a {
 
 @media (min-width: 767px) {
   .main_product {
+    display: flex;
     justify-content: center;
   }
   .main_product .product .produtozudo {
@@ -1229,10 +1224,11 @@ a {
   margin: 2rem;
 }
 .Main_FaleConosco .Faq {
-  margin: 1rem;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 .Main_FaleConosco .Faq .Faq_title {
   font-size: 2.5rem;
@@ -1283,6 +1279,13 @@ a {
   opacity: 1;
   padding: 1rem 0;
 }
+.Main_FaleConosco .infos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 2rem;
+  width: 100%;
+}
 .Main_FaleConosco .Titulo_info {
   font-size: 2.5rem;
 }
@@ -1321,7 +1324,7 @@ a {
 }
 .Main_FaleConosco .Consult .forms_consult .descricao_consult {
   border-radius: 1rem;
-  width: 27rem;
+  width: auto;
   height: 10rem;
   background-color: #D9D9D9;
   resize: none;
@@ -1388,6 +1391,8 @@ a {
   .Main_FaleConosco .infos {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
   }
   .Main_FaleConosco .infos .Titulo_info {
     font-size: 3rem;

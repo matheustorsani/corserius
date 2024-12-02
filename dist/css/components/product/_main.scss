@@ -1,7 +1,6 @@
 @import '../../important/responsive';
 
 .main_product {
-    display: flex;
     margin: 3rem;
 
     .product {
@@ -179,6 +178,7 @@
 
 @include responsive {
     .main_product {
+        display: flex;
         justify-content: center;
         .product {
             
