@@ -52,7 +52,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            
+
 
             .item_links {
                 margin-bottom: 1rem;
@@ -60,25 +60,28 @@
                 a {
                     @include aStyle;
                 }
+
                 &:hover {
                     opacity: 0.9;
                 }
             }
 
         }
-        .items_faq{
-            @media screen and (max-width: 767px) {
-                display: none;
-                
-            }
+
+        .items_faq {
+            display: none;
         }
 
         .moreSocial {
             display: flex;
             justify-content: center;
             margin-top: 3rem;
+            .wrapper {
+                display: none;
+            }
             .social {
                 display: flex;
+
                 .social_item {
                     font-size: 2rem;
                     color: #ffffff;
@@ -116,6 +119,7 @@
 
             .items_aboutus {
                 align-items: start;
+
                 .item_links {
                     margin: 0;
 
@@ -172,14 +176,12 @@
                 display: flex;
                 gap: 2rem;
                 flex-direction: column;
-                
+
                 .wrapper {
                     display: flex;
                     gap: 7rem;
                     align-items: center;
                     justify-content: center;
-                    
-                    
                 }
 
                 .social {
@@ -189,7 +191,7 @@
                     margin: 0;
                     gap: 1rem;
 
-                    .social_item a{
+                    .social_item a {
                         color: #000000;
                     }
                 }
@@ -204,7 +206,6 @@
 
                     .icon {
                         height: 30px;
-                        width: 30px;
                     }
                 }
             }
