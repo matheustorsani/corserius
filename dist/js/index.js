@@ -11,7 +11,7 @@ const elements = {
     entrar: document.querySelector(".register_login"),
     cadastrar: document.querySelector(".cad"),
     faq: document.querySelectorAll(".Faq_item"),
-    faqtext: document.querySelectorAll(".Faq_text")
+    faqtext: document.querySelectorAll(".Faq_text"),
 };
 
 
@@ -66,3 +66,23 @@ elements.cadastrar.addEventListener("click", () => {
         OpCl(elements.faqtext[i]);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.carroselDesk');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        slide.classList.toggle('hidden', i !== index);
+      });
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % slides.length; 
+      showSlide(currentIndex);
+    }
+
+    setInterval(autoSlide, 3000);
+  });
+

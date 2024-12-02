@@ -727,12 +727,19 @@ a {
     width: 100%;
     display: block;
   }
-  .MainDesktop .CarroselMob .banner .carroselmobile {
-    -webkit-clip-path: inset(0 0 15% 0);
-            clip-path: inset(0 0 15% 0);
-    -o-object-fit: cover;
-       object-fit: cover;
+  .MainDesktop .CarroselMob .banner .carroselDesk {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease-in-out;
+  }
+  .MainDesktop .CarroselMob .banner .carroselDesk.active {
+    opacity: 1;
+    visibility: visible;
   }
   .MainDesktop .VejaDesk {
     font-size: 1.4rem;
@@ -961,6 +968,18 @@ a {
 .registerscreen .register .register_form .lbl::before {
   content: "*";
   color: #ff5757;
+}
+.loginscreen .login .login_form .lbl .olinho::before,
+.loginscreen .login .register_form .lbl .olinho::before,
+.loginscreen .register .login_form .lbl .olinho::before,
+.loginscreen .register .register_form .lbl .olinho::before,
+.registerscreen .login .login_form .lbl .olinho::before,
+.registerscreen .login .register_form .lbl .olinho::before,
+.registerscreen .register .login_form .lbl .olinho::before,
+.registerscreen .register .register_form .lbl .olinho::before {
+  content: "👁️";
+  cursor: pointer;
+  padding-left: 0.5rem;
 }
 .loginscreen .login .login_form .login_input,
 .loginscreen .login .login_form .register_input,
